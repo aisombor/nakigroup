@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sogo Hotel by Colorlib.com</title>
+    <title>Press &amp; Media &ndash; Naki Group</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="Official press releases, media news, CSR initiatives, and corporate announcements from Naki Group Cambodia." />
+    <meta name="keywords" content="Naki Group Press, Media Releases, Cambodia Real Estate News, Silvertown Metropolitan, Woodland Residences, Agile Sky, TK Avenue" />
+    <meta name="author" content="Naki Group" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -29,40 +29,71 @@
     <header class="site-header js-site-header">
       <div class="container-fluid">
         <div class="row align-items-center justify-content-between">
-          <div style="height: 90px; display: flex;"><a href="index.html"><img src="https://nakigroup.com/wp-content/uploads/2022/08/NKG-Logo-Header.png" alt="Naki Group logo" style="height: 100%; width: 100%;" /></a></div>
-          <div class="col-6 col-lg-8">
-            
+          <!-- Logo -->
+          <div class="logo-wrapper">
+            <a href="index.html">
+              <img src="https://nakigroup.com/wp-content/uploads/2022/08/NKG-Logo-Header.png" alt="Naki Group logo" class="site-logo-img" />
+            </a>
+          </div>
+          
+          <!-- Desktop Navigation -->
+          <div class="col-6 col-lg-8 desktop-nav">
             <nav class="main-navbar">
               <ul class="main-menu">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="rooms.html">Rooms</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="events.html">Events</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                  <li class="active"><a href="reservation.html">Reservation</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="active"><a href="reservation.html">Press</a></li>
               </ul>
             </nav>
+          </div>
+          
+          <!-- Mobile Menu Toggle Button -->
+          <div class="mobile-menu-toggle">
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
         </div>
       </div>
     </header>
+      
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+      <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="active"><a href="reservation.html">Press</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
     <!-- END head -->
 
-    <section class="site-hero inner-page overlay" style="background-image: url(images/hero_4.jpg)" data-stellar-background-ratio="0.5">
+    <section class="site-hero inner-page overlay" style="background-image: url(images/hero_3.jpg)" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row site-hero-inner justify-content-center align-items-center">
           <div class="col-md-10 text-center" data-aos="fade">
-            <h1 class="heading mb-3">Reservation Form</h1>
+            <h1 class="heading mb-3">Press &amp; Media</h1>
+            <p class="text-white lead mb-4" style="opacity: 0.9; max-width: 700px; margin: 0 auto;">Official news, press releases, corporate milestones, and community initiatives from Naki Group.</p>
             <ul class="custom-breadcrumbs mb-4">
               <li><a href="index.html">Home</a></li>
               <li>&bullet;</li>
-              <li>Reservation</li>
+              <li>Press</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <a class="mouse smoothscroll" href="#next">
+      <a class="mouse smoothscroll" href="#press-content">
         <div class="mouse-icon">
           <span class="mouse-wheel"></span>
         </div>
@@ -70,218 +101,391 @@
     </section>
     <!-- END section -->
 
-    <section class="section contact-section" id="next">
+    <!-- Press Releases & News Section -->
+    <section class="section" id="press-content">
       <div class="container">
-        <div class="row">
-          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-            
-            <form action="#" method="post" class="bg-white p-md-5 p-4 mb-5 border">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <label class="text-black font-weight-bold" for="name">Name</label>
-                  <input type="text" id="name" class="form-control ">
+        
+        <!-- Category Filter Pills -->
+        <div class="press-filter-wrapper" data-aos="fade-up">
+          <ul class="press-filters">
+            <li><a href="javascript:void(0)" class="press-filter-btn active">All News</a></li>
+            <li><a href="javascript:void(0)" class="press-filter-btn">CSR &amp; Community</a></li>
+            <li><a href="javascript:void(0)" class="press-filter-btn">Press Releases</a></li>
+            <li><a href="javascript:void(0)" class="press-filter-btn">Milestones</a></li>
+            <li><a href="javascript:void(0)" class="press-filter-btn">Developments</a></li>
+          </ul>
+        </div>
+
+        <!-- Featured Headline Press Release -->
+        <div class="press-featured-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="row no-gutters">
+            <div class="col-lg-6 col-12">
+              <div class="press-featured-img-wrap">
+                <img src="https://nakigroup.com/wp-content/uploads/2022/10/136179487_1049033925606051_1455072859358337372_n.jpg" alt="Keep Cool Keep Safe Campaign">
+              </div>
+            </div>
+            <div class="col-lg-6 col-12">
+              <div class="press-featured-body">
+                <div>
+                  <span class="press-badge badge-csr">CSR &amp; Community Highlight</span>
                 </div>
-                <div class="col-md-6 form-group">
-                  <label class="text-black font-weight-bold" for="phone">Phone</label>
-                  <input type="text" id="phone" class="form-control ">
+                <div class="press-meta">
+                  <span><i class="fa fa-calendar"></i> November 2024</span>
+                  <span><i class="fa fa-map-marker"></i> Phnom Penh, Cambodia</span>
+                  <span><i class="fa fa-tag"></i> Community Safety</span>
+                </div>
+                <h2 class="press-featured-title">Naki Group &amp; Agile Sky Residence Launch "Keep Cool, Keep Safe" Road Safety Campaign</h2>
+                <p class="press-featured-desc">In demonstration of our dedicated commitment to social welfare, Naki Group in collaboration with Agile Sky Residence donated 2,000 certified safety helmets to primary school students, youth volunteers, and traffic police across Phnom Penh to promote roadway safety and prevent fatalities.</p>
+                
+                <div class="press-impact-grid">
+                  <div class="press-impact-item">
+                    <span class="press-impact-number">2,000+</span>
+                    <span class="press-impact-label">Helmets Donated</span>
+                  </div>
+                  <div class="press-impact-item">
+                    <span class="press-impact-number">5</span>
+                    <span class="press-impact-label">Schools &amp; Districts</span>
+                  </div>
+                  <div class="press-impact-item">
+                    <span class="press-impact-number">100%</span>
+                    <span class="press-impact-label">Community Driven</span>
+                  </div>
+                </div>
+
+                <div>
+                  <a href="#media-inquiry" class="btn btn-primary text-white px-4 py-2 font-weight-bold smoothscroll">Media Inquiry</a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Press Releases Grid -->
+        <div class="row">
           
-              <div class="row">
-                <div class="col-md-12 form-group">
-                  <label class="text-black font-weight-bold" for="email">Email</label>
-                  <input type="email" id="email" class="form-control ">
-                </div>
+          <!-- News Card 1 -->
+          <div class="col-lg-4 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="press-card">
+              <div class="press-card-img-wrap">
+                <img src="https://nakigroup.com/wp-content/uploads/2022/08/SLT-3.jpg" alt="Silvertown Metropolitan">
               </div>
-
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <label class="text-black font-weight-bold" for="checkin_date">Date Check In</label>
-                  <input type="text" id="checkin_date" class="form-control">
+              <div class="press-card-body">
+                <div>
+                  <span class="press-badge badge-corp">Corporate Milestone</span>
                 </div>
-                <div class="col-md-6 form-group">
-                  <label class="text-black font-weight-bold" for="checkout_date">Date Check Out</label>
-                  <input type="text" id="checkout_date" class="form-control">
+                <div class="press-meta">
+                  <span><i class="fa fa-calendar"></i> October 2024</span>
+                  <span><i class="fa fa-map-marker"></i> BKK1</span>
                 </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <label for="adults" class="font-weight-bold text-black">Adults</label>
-                  <div class="field-icon-wrap">
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="adults" class="form-control">
-                      <option value="">1</option>
-                      <option value="">2</option>
-                      <option value="">3</option>
-                      <option value="">4+</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-6 form-group">
-                  <label for="children" class="font-weight-bold text-black">Children</label>
-                  <div class="field-icon-wrap">
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="children" class="form-control">
-                      <option value="">1</option>
-                      <option value="">2</option>
-                      <option value="">3</option>
-                      <option value="">4+</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              
-
-              <div class="row mb-4">
-                <div class="col-md-12 form-group">
-                  <label class="text-black font-weight-bold" for="message">Notes</label>
-                  <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="submit" value="Reserve Now" class="btn btn-primary text-white py-3 px-5 font-weight-bold">
-                </div>
-              </div>
-            </form>
-
-          </div>
-          <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
-            <div class="row">
-              <div class="col-md-10 ml-auto contact-info">
-                <p><span class="d-block">Address:</span> <span class="text-black"> 98 West 21th Street, Suite 721 New York NY 10016</span></p>
-                <p><span class="d-block">Phone:</span> <span class="text-black"> (+1) 435 3533</span></p>
-                <p><span class="d-block">Email:</span> <span class="text-black"> info@yourdomain.com</span></p>
+                <h3 class="press-card-title">Silvertown Metropolitan Achieves Landmark 92% Occupancy in BKK1</h3>
+                <p class="press-card-desc">Leading the capital's serviced apartment sector, Silvertown Metropolitan expands its luxury executive lounge and concierge hospitality services for international business residents.</p>
+                <a href="rooms.html" class="press-card-link">View Project Story <i class="fa fa-arrow-right"></i></a>
               </div>
             </div>
           </div>
+
+          <!-- News Card 2 -->
+          <div class="col-lg-4 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="press-card">
+              <div class="press-card-img-wrap">
+                <img src="https://nakigroup.com/wp-content/uploads/2022/08/Woodland-1-1024x683.jpg" alt="Woodland Residences">
+              </div>
+              <div class="press-card-body">
+                <div>
+                  <span class="press-badge badge-project">Development</span>
+                </div>
+                <div class="press-meta">
+                  <span><i class="fa fa-calendar"></i> August 2024</span>
+                  <span><i class="fa fa-map-marker"></i> Hun Sen Blvd</span>
+                </div>
+                <h3 class="press-card-title">Woodland Residences Breaks Ground on Phase 2 Luxury Villas</h3>
+                <p class="press-card-desc">Responding to overwhelming homeowner demand, Naki Group commences construction on Phase 2, offering 84 exclusive bespoke villas built with deep 30-meter foundational engineering.</p>
+                <a href="rooms.html" class="press-card-link">View Project Story <i class="fa fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Card 3 -->
+          <div class="col-lg-4 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="press-card">
+              <div class="press-card-img-wrap">
+                <img src="https://nakigroup.com/wp-content/uploads/2022/10/136179487_1049033925606051_1455072859358337372_n.jpg" alt="Agile Sky Residence">
+              </div>
+              <div class="press-card-body">
+                <div>
+                  <span class="press-badge badge-corp">High-Rise Milestone</span>
+                </div>
+                <div class="press-meta">
+                  <span><i class="fa fa-calendar"></i> June 2024</span>
+                  <span><i class="fa fa-map-marker"></i> Monivong Blvd</span>
+                </div>
+                <h3 class="press-card-title">Agile Sky Residence Celebrates Structural Milestone</h3>
+                <p class="press-card-desc">The 44-storey architectural skyscraper marks full structural topping off, bringing modern luxury standards and superior rental yield investments to the Monivong financial district.</p>
+                <a href="rooms.html" class="press-card-link">View Project Story <i class="fa fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Card 4 -->
+          <div class="col-lg-4 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="press-card">
+              <div class="press-card-img-wrap">
+                <img src="images/img_5.jpg" alt="TK Avenue Mall">
+              </div>
+              <div class="press-card-body">
+                <div>
+                  <span class="press-badge badge-project">Retail Management</span>
+                </div>
+                <div class="press-meta">
+                  <span><i class="fa fa-calendar"></i> April 2024</span>
+                  <span><i class="fa fa-map-marker"></i> Toul Kork</span>
+                </div>
+                <h3 class="press-card-title">TK Avenue Mall Expands Global Dining &amp; Retail Lineup</h3>
+                <p class="press-card-desc">Managed by Naki Group's property division, TK Avenue welcomes distinguished international culinary and lifestyle retail brands to strengthen Toul Kork's premier boutique destination.</p>
+                <a href="rooms.html" class="press-card-link">View Portfolio <i class="fa fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Card 5 -->
+          <div class="col-lg-4 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="press-card">
+              <div class="press-card-img-wrap">
+                <img src="images/slider-4.jpg" alt="Naki Suites">
+              </div>
+              <div class="press-card-body">
+                <div>
+                  <span class="press-badge badge-corp">Hospitality</span>
+                </div>
+                <div class="press-meta">
+                  <span><i class="fa fa-calendar"></i> February 2024</span>
+                  <span><i class="fa fa-map-marker"></i> Phnom Penh</span>
+                </div>
+                <h3 class="press-card-title">Naki Suites Unveils Next-Gen Extended Stay for Professionals</h3>
+                <p class="press-card-desc">Designed for global executives and digital business travelers, Naki Suites introduces fully furnished boutique living spaces equipped with business amenities and round-the-clock service.</p>
+                <a href="rooms.html" class="press-card-link">View Suites <i class="fa fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Card 6 -->
+          <div class="col-lg-4 col-md-6 col-12 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="press-card">
+              <div class="press-card-img-wrap">
+                <img src="images/hero_2.jpg" alt="Cambodia Real Estate Awards">
+              </div>
+              <div class="press-card-body">
+                <div>
+                  <span class="press-badge badge-csr">Industry Honors</span>
+                </div>
+                <div class="press-meta">
+                  <span><i class="fa fa-calendar"></i> December 2023</span>
+                  <span><i class="fa fa-map-marker"></i> Phnom Penh</span>
+                </div>
+                <h3 class="press-card-title">Naki Group Recognized at Cambodia Real Estate Awards</h3>
+                <p class="press-card-desc">Honored for operational excellence, tenant community satisfaction, and innovative mixed-use developments by Cambodia's leading real estate industry peers and juries.</p>
+                <a href="about.html" class="press-card-link">About Naki Group <i class="fa fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
 
-    <section class="section testimonial-section bg-light">
+    <!-- Media Relations & Press Kit Section -->
+    <section class="press-media-section" id="media-inquiry">
       <div class="container">
+        
         <div class="row justify-content-center text-center mb-5">
-          <div class="col-md-7">
-            <h2 class="heading" data-aos="fade-up">People Says</h2>
+          <div class="col-md-8" data-aos="fade-up">
+            <h2 class="heading mb-3" style="color: #0f2b5c; font-weight: 700;">Media Relations &amp; Press Kit</h2>
+            <p class="text-muted">For press inquiries, official media interviews, high-resolution photography, or corporate statements, our communications team is ready to assist you.</p>
           </div>
         </div>
+
         <div class="row">
-          <div class="js-carousel-2 owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
-            
-            <div class="testimonial text-center slider-item">
-              <div class="author-image mb-3">
-                <img src="images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+          
+          <!-- Media Contact Information -->
+          <div class="col-lg-6 col-12 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="press-info-card">
+              <div class="press-info-header">
+                <div class="press-info-icon">
+                  <i class="fa fa-microphone"></i>
+                </div>
+                <div>
+                  <h4 class="press-info-title">Corporate Press Office</h4>
+                  <p class="text-muted mb-0 small">Official Media &amp; Public Relations Channel</p>
+                </div>
               </div>
-              <blockquote>
 
-                <p>&ldquo;A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
-              </blockquote>
-              <p><em>&mdash; Jean Smith</em></p>
-            </div> 
-
-            <div class="testimonial text-center slider-item">
-              <div class="author-image mb-3">
-                <img src="images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+              <div class="press-contact-item">
+                <i class="fa fa-envelope-o"></i>
+                <div>
+                  <strong>Press &amp; Media Inquiries</strong>
+                  <p><a href="mailto:info@nakigroup.com" class="text-primary font-weight-bold">info@nakigroup.com</a></p>
+                </div>
               </div>
-              <blockquote>
-                <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
-              </blockquote>
-              <p><em>&mdash; John Doe</em></p>
+
+              <div class="press-contact-item">
+                <i class="fa fa-phone"></i>
+                <div>
+                  <strong>Direct Press Hotline</strong>
+                  <p><a href="tel:+85523868959" class="text-dark font-weight-bold">(+855) 23 868 959</a></p>
+                </div>
+              </div>
+
+              <div class="press-contact-item">
+                <i class="fa fa-map-marker"></i>
+                <div>
+                  <strong>Headquarters Location</strong>
+                  <p>Diamond Twin Tower, 22nd Floor, Koh Pich (Diamond Island), Phnom Penh, Kingdom of Cambodia</p>
+                </div>
+              </div>
+
+              <div class="press-contact-item">
+                <i class="fa fa-clock-o"></i>
+                <div>
+                  <strong>Media Office Hours</strong>
+                  <p>Monday &ndash; Friday: 8:00 AM &ndash; 5:30 PM (GMT+7)</p>
+                </div>
+              </div>
+
+              <div class="mt-4 pt-3 border-top">
+                <a href="contact.html" class="btn btn-outline-primary px-4 py-2 font-weight-bold">Send Press Inquiry</a>
+              </div>
             </div>
-
-            <div class="testimonial text-center slider-item">
-              <div class="author-image mb-3">
-                <img src="images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
-              </div>
-              <blockquote>
-
-                <p>&ldquo;When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.&rdquo;</p>
-              </blockquote>
-              <p><em>&mdash; John Doe</em></p>
-            </div>
-
-
-            <div class="testimonial text-center slider-item">
-              <div class="author-image mb-3">
-                <img src="images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
-              </div>
-              <blockquote>
-
-                <p>&ldquo;A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
-              </blockquote>
-              <p><em>&mdash; Jean Smith</em></p>
-            </div> 
-
-            <div class="testimonial text-center slider-item">
-              <div class="author-image mb-3">
-                <img src="images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
-              </div>
-              <blockquote>
-                <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
-              </blockquote>
-              <p><em>&mdash; John Doe</em></p>
-            </div>
-
-            <div class="testimonial text-center slider-item">
-              <div class="author-image mb-3">
-                <img src="images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
-              </div>
-              <blockquote>
-
-                <p>&ldquo;When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.&rdquo;</p>
-              </blockquote>
-              <p><em>&mdash; John Doe</em></p>
-            </div>
-
           </div>
-            <!-- END slider -->
+
+          <!-- Brand Kit & Assets -->
+          <div class="col-lg-6 col-12 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="press-info-card">
+              <div class="press-info-header">
+                <div class="press-info-icon" style="background: #e59934;">
+                  <i class="fa fa-download"></i>
+                </div>
+                <div>
+                  <h4 class="press-info-title">Brand Assets &amp; Resources</h4>
+                  <p class="text-muted mb-0 small">Official Logos, Guidelines &amp; Executive Bios</p>
+                </div>
+              </div>
+
+              <ul class="press-asset-list">
+                <li class="press-asset-item">
+                  <div class="press-asset-details">
+                    <span class="press-asset-icon"><i class="fa fa-file-image-o"></i></span>
+                    <div>
+                      <span class="press-asset-name">Naki Group Official Logos</span>
+                      <span class="press-asset-format">SVG, PNG, EPS (Light &amp; Dark variants)</span>
+                    </div>
+                  </div>
+                  <a href="https://nakigroup.com/wp-content/uploads/2022/08/NKG-Logo-Header.png" target="_blank" class="btn btn-sm btn-outline-primary press-asset-btn">View Asset</a>
+                </li>
+
+                <li class="press-asset-item">
+                  <div class="press-asset-details">
+                    <span class="press-asset-icon"><i class="fa fa-file-pdf-o"></i></span>
+                    <div>
+                      <span class="press-asset-name">Corporate Profile &amp; Fact Sheet</span>
+                      <span class="press-asset-format">PDF format &bull; 4.2 MB &bull; 2024 Edition</span>
+                    </div>
+                  </div>
+                  <a href="about.html" class="btn btn-sm btn-outline-primary press-asset-btn">Learn More</a>
+                </li>
+
+                <li class="press-asset-item">
+                  <div class="press-asset-details">
+                    <span class="press-asset-icon"><i class="fa fa-building-o"></i></span>
+                    <div>
+                      <span class="press-asset-name">Signature Projects Photography</span>
+                      <span class="press-asset-format">High-Res JPEG Collection (Print &amp; Web)</span>
+                    </div>
+                  </div>
+                  <a href="rooms.html" class="btn btn-sm btn-outline-primary press-asset-btn">Explore</a>
+                </li>
+
+                <li class="press-asset-item">
+                  <div class="press-asset-details">
+                    <span class="press-asset-icon"><i class="fa fa-heart-o"></i></span>
+                    <div>
+                      <span class="press-asset-name">CSR Initiative Documentation</span>
+                      <span class="press-asset-format">"Keep Cool, Keep Safe" Helmet Campaign</span>
+                    </div>
+                  </div>
+                  <a href="#press-content" class="btn btn-sm btn-outline-primary press-asset-btn smoothscroll">Read Report</a>
+                </li>
+              </ul>
+
+              <div class="mt-3">
+                <p class="small text-muted mb-0"><i class="fa fa-info-circle text-primary"></i> For broadcast and high-resolution video b-roll footage, please contact our PR team directly at <a href="mailto:info@nakigroup.com">info@nakigroup.com</a>.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Press Alert Subscription -->
+        <div class="press-subscribe-card" data-aos="fade-up">
+          <div class="row align-items-center">
+            <div class="col-lg-7 col-12 mb-3 mb-lg-0">
+              <h3>Subscribe to Naki Group Press Alerts</h3>
+              <p class="mb-0">Receive official press releases, market perspectives, and milestone announcements directly to your inbox.</p>
+            </div>
+            <div class="col-lg-5 col-12">
+              <form action="#" class="press-subscribe-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Naki Group press releases.');">
+                <div class="input-group">
+                  <input type="email" class="form-control" placeholder="Enter your business email..." required>
+                  <div class="input-group-append">
+                    <button class="btn" type="submit">Subscribe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
 
       </div>
     </section>
 
-    
-    
+    <!-- Bottom CTA -->
     <section class="section bg-image overlay" style="background-image: url('images/hero_4.jpg');">
-        <div class="container" >
-          <div class="row align-items-center">
-            <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
-              <h2 class="text-white font-weight-bold">A Best Place To Stay. Reserve Now!</h2>
-            </div>
-            <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
-              <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
-            </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-8 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
+            <h2 class="text-white font-weight-bold mb-2">Partner with Naki Group</h2>
+            <p class="text-white mb-0" style="opacity: 0.9;">Connect with our executive team for property developments, commercial leasing, or corporate partnerships.</p>
+          </div>
+          <div class="col-12 col-md-4 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
+            <a href="contact.html" class="btn btn-outline-white-primary py-3 text-white px-4">Contact Our Offices</a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-        <footer class="section footer-section">
+    <footer class="section footer-section">
       <div class="container">
         <div class="row mb-4">
           <div class="col-md-3 mb-5">
             <ul class="list-unstyled link">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Terms &amp; Conditions</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-             <li><a href="#">Rooms</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="rooms.html">Projects</a></li>
+              <li><a href="events.html">Careers</a></li>
+              <li><a href="reservation.html">Press &amp; Media</a></li>
             </ul>
           </div>
           <div class="col-md-3 mb-5">
             <ul class="list-unstyled link">
-              <li><a href="#">The Rooms &amp; Suites</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Restaurant</a></li>
+              <li><a href="rooms.html">Silvertown Metropolitan</a></li>
+              <li><a href="rooms.html">Woodland Residences</a></li>
+              <li><a href="rooms.html">Agile Sky Residence</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
           <div class="col-md-3 mb-5 pr-md-5 contact-info">
-            <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
-            <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span> National Assembly Road,Phnom Penh, Cambodia <br> Suite 721 New York NY 10016</span></p>
-            <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span> <span> (+855) 23-900-959</span></p>
-            <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span> <span> info@nakihospitality.com</span></p>
+            <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span> Diamond Twin Tower, 22nd Floor, Koh Pich, Phnom Penh, Cambodia</span></p>
+            <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span> <span> (+855) 23 868 959</span></p>
+            <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span> <span> info@nakigroup.com</span></p>
           </div>
           <div class="col-md-3 mb-5">
             <p>Sign up for our newsletter</p>
@@ -296,16 +500,15 @@
         <div class="row pt-5">
           <p class="col-md-6 text-left">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script>| A NAKI GROUP COMPANY <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> | A NAKI GROUP COMPANY <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
           </p>
             
           <p class="col-md-6 text-right social">
-            <a href="#"><span class="fa fa-tripadvisor"></span></a>
             <a href="#"><span class="fa fa-facebook"></span></a>
             <a href="#"><span class="fa fa-twitter"></span></a>
             <a href="#"><span class="fa fa-linkedin"></span></a>
-            <a href="#"><span class="fa fa-vimeo"></span></a>
+            <a href="#"><span class="fa fa-instagram"></span></a>
           </p>
         </div>
       </div>
@@ -328,5 +531,14 @@
     
 
     <script src="js/main.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.press-filter-btn').on('click', function(e) {
+          e.preventDefault();
+          $('.press-filter-btn').removeClass('active');
+          $(this).addClass('active');
+        });
+      });
+    </script>
   </body>
 </html>

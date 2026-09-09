@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" width="100%" height="100%">
+  <!-- Silvertown Metropolitan Icon -->
+  <g id="towers">
+    <!-- Left Tower (Main) -->
+    <path d="M 162,175 L 164,75 C 165,52 170,38 179,32 C 180,31 182,33 183,37 L 194,80 L 194,175 Z" fill="#9CA2AA"/>
+    <!-- Left Tower shadow facet -->
+    <path d="M 179,32 C 183,48 190,72 194,80 L 194,175 L 180,175 Z" fill="#888E96" opacity="0.45"/>
+    <!-- Right Tower -->
+    <path d="M 199,175 L 199,85 C 206,94 216,106 226,118 L 226,175 Z" fill="#81878F"/>
+  </g>
+
+  <!-- Typography -->
+  <!-- SILVERTOWN -->
+  <text x="210" y="222" text-anchor="middle" font-family="'Montserrat', 'Arial Black', -apple-system, sans-serif" font-size="33" font-weight="700" letter-spacing="4" fill="#6C737D">
+    SILVERTOWN
+  </text>
+  
+  <!-- METROPOLITAN -->
+  <text x="210" y="254" text-anchor="middle" font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="8" fill="#9BA1AB">
+    METROPOLITAN
+  </text>
+</svg>

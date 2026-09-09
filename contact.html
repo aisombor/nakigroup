@@ -29,23 +29,53 @@
     <header class="site-header js-site-header">
       <div class="container-fluid">
         <div class="row align-items-center justify-content-between">
-          <div style="height: 90px; display: flex;"><a href="index.html"><img src="https://nakigroup.com/wp-content/uploads/2022/08/NKG-Logo-Header.png" alt="Naki Group logo" style="height: 100%; width: 100%;" /></a></div>
-          <div class="col-6 col-lg-8">
-            
+          <!-- Logo -->
+          <div class="logo-wrapper">
+            <a href="index.html">
+              <img src="https://nakigroup.com/wp-content/uploads/2022/08/NKG-Logo-Header.png" alt="Naki Group logo" class="site-logo-img" />
+            </a>
+          </div>
+          
+          <!-- Desktop Navigation -->
+          <div class="col-6 col-lg-8 desktop-nav">
             <nav class="main-navbar">
               <ul class="main-menu">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="rooms.html">Rooms</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="events.html">Events</a></li>
-                  <li class="active"><a href="contact.html">Contact</a></li>
-                  <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Careers</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
+                <li><a href="reservation.html">Press</a></li>
               </ul>
             </nav>
+          </div>
+          
+          <!-- Mobile Menu Toggle Button -->
+          <div class="mobile-menu-toggle">
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
         </div>
       </div>
     </header>
+      
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+      <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Careers</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
+        <li><a href="reservation.html">Press</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
     <!-- END head -->
 
     <section class="site-hero inner-page overlay" style="background-image: url(images/hero_4.jpg)" data-stellar-background-ratio="0.5">
@@ -72,47 +102,104 @@
 
     <section class="section contact-section" id="next">
       <div class="container">
-        <div class="row">
-          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-            
-            <form action="#" method="post" class="bg-white p-md-5 p-4 mb-5 border">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" class="form-control ">
-                </div>
-                <div class="col-md-6 form-group">
-                  <label for="phone">Phone</label>
-                  <input type="text" id="phone" class="form-control ">
-                </div>
-              </div>
-          
-              <div class="row">
-                <div class="col-md-12 form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" class="form-control ">
-                </div>
-              </div>
-              <div class="row mb-4">
-                <div class="col-md-12 form-group">
-                  <label for="message">Write Message</label>
-                  <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="submit" value="Send Message" class="btn btn-primary text-white font-weight-bold">
-                </div>
-              </div>
-            </form>
-
+        <div class="row align-items-stretch">
+          <!-- Google Map Column -->
+          <div class="col-lg-6 col-md-12 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-map-holder">
+              <iframe 
+                src="https://maps.google.com/maps?q=NAKI+Group+Co.,+Ltd,+Diamond+Twin+Tower,+Phnom+Penh&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
           </div>
-          <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
-            <div class="row">
-              <div class="col-md-10 ml-auto contact-info">
-                <p><span class="d-block">Address:</span> <span> 98 West 21th Street, Suite 721 New York NY 10016</span></p>
-                <p><span class="d-block">Phone:</span> <span> (+1) 234 4567 8910</span></p>
-                <p><span class="d-block">Email:</span> <span> info@domain.com</span></p>
+          
+          <!-- Contact Form Column -->
+          <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="contact-form-card bg-white p-4 p-md-5 border rounded shadow-sm">
+              <h2 class="contact-section-title mb-4">Contact Us</h2>
+              <form action="#" method="post">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Your Name">
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" class="form-control" placeholder="Your Phone">
+                  </div>
+                </div>
+            
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Your Email">
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <div class="col-md-12 form-group">
+                    <label for="message">Write Message</label>
+                    <textarea name="message" id="message" class="form-control" cols="30" rows="6" placeholder="Write your message here..."></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group mb-0">
+                    <input type="submit" value="Send Message" class="btn btn-primary text-white font-weight-bold px-4 py-2">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- International Offices Section -->
+    <section class="section offices-section">
+      <div class="container">
+        <div class="row">
+          <!-- Cambodia -->
+          <div class="col-lg-4 col-md-4 col-12 office-col" data-aos="fade-up" data-aos-delay="100">
+            <div class="office-card">
+              <h3 class="office-country">CAMBODIA</h3>
+              <div class="office-item">
+                <i class="fa fa-map-marker office-icon" aria-hidden="true"></i>
+                <span class="office-text">Koh Pich, Diamond Twin Tower, 22nd Floor, Sopheak Mongkol Rd, Phnom Penh, Cambodia, 12301</span>
+              </div>
+              <div class="office-item">
+                <i class="fa fa-phone office-icon" aria-hidden="true"></i>
+                <span class="office-text"><a href="tel:+85523868959">+855 23 868 959</a></span>
+              </div>
+              <div class="office-item">
+                <i class="fa fa-envelope office-icon" aria-hidden="true"></i>
+                <span class="office-text"><a href="mailto:info@nakigroup.com">info@nakigroup.com</a></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- United States -->
+          <div class="col-lg-4 col-md-4 col-12 office-col" data-aos="fade-up" data-aos-delay="200">
+            <div class="office-card">
+              <h3 class="office-country">UNITED STATES</h3>
+              <div class="office-item">
+                <i class="fa fa-map-marker office-icon" aria-hidden="true"></i>
+                <span class="office-text">STE 1400 506 2ND AVE, SEATTLE WA 98104-2329</span>
+              </div>
+              <div class="office-item">
+                <i class="fa fa-envelope office-icon" aria-hidden="true"></i>
+                <span class="office-text"><a href="mailto:info@vezventures.com">info@vezventures.com</a></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Singapore -->
+          <div class="col-lg-4 col-md-4 col-12 office-col" data-aos="fade-up" data-aos-delay="300">
+            <div class="office-card">
+              <h3 class="office-country">SINGAPORE</h3>
+              <div class="office-item">
+                <i class="fa fa-map-marker office-icon" aria-hidden="true"></i>
+                <span class="office-text">9 Temasek Boulevard Suntec Tower 2 #31-01 Singapore 038989.</span>
               </div>
             </div>
           </div>
@@ -120,7 +207,7 @@
       </div>
     </section>
 
-    <section class="section testimonial-section bg-light">
+    <!-- <section class="section testimonial-section bg-light">
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-7">
@@ -200,7 +287,7 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
 
     
     
@@ -208,10 +295,10 @@
         <div class="container" >
           <div class="row align-items-center">
             <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
-              <h2 class="text-white font-weight-bold">A Best Place To Stay. Reserve Now!</h2>
+              <h2 class="text-white font-weight-bold">Read Our Latest Press &amp; Media Releases</h2>
             </div>
             <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
-              <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
+              <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">View Press Releases</a>
             </div>
           </div>
         </div>
@@ -222,25 +309,24 @@
         <div class="row mb-4">
           <div class="col-md-3 mb-5">
             <ul class="list-unstyled link">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Terms &amp; Conditions</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-             <li><a href="#">Rooms</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="rooms.html">Projects</a></li>
+              <li><a href="events.html">Careers</a></li>
+              <li><a href="reservation.html">Press &amp; Media</a></li>
             </ul>
           </div>
           <div class="col-md-3 mb-5">
             <ul class="list-unstyled link">
-              <li><a href="#">The Rooms &amp; Suites</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Restaurant</a></li>
+              <li><a href="rooms.html">Silvertown Metropolitan</a></li>
+              <li><a href="rooms.html">Woodland Residences</a></li>
+              <li><a href="rooms.html">Agile Sky Residence</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
           <div class="col-md-3 mb-5 pr-md-5 contact-info">
-            <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
-            <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span> National Assembly Road,Phnom Penh, Cambodia <br> Suite 721 New York NY 10016</span></p>
-            <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span> <span> (+855) 23-900-959</span></p>
-            <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span> <span> info@nakihospitality.com</span></p>
+            <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span> Diamond Twin Tower, 22nd Floor, Koh Pich, Phnom Penh, Cambodia</span></p>
+            <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span> <span> (+855) 23 868 959</span></p>
+            <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span> <span> info@nakigroup.com</span></p>
           </div>
           <div class="col-md-3 mb-5">
             <p>Sign up for our newsletter</p>

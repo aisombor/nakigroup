@@ -29,23 +29,53 @@
     <header class="site-header js-site-header">
       <div class="container-fluid">
         <div class="row align-items-center justify-content-between">
-          <div style="height: 90px; display: flex;"><a href="index.html"><img src="https://nakigroup.com/wp-content/uploads/2022/08/NKG-Logo-Header.png" alt="Naki Group logo" style="height: 100%; width: 100%;" /></a></div>
-          <div class="col-6 col-lg-8">
-            
+          <!-- Logo -->
+          <div class="logo-wrapper">
+            <a href="index.html">
+              <img src="https://nakigroup.com/wp-content/uploads/2022/08/NKG-Logo-Header.png" alt="Naki Group logo" class="site-logo-img" />
+            </a>
+          </div>
+          
+          <!-- Desktop Navigation -->
+          <div class="col-6 col-lg-8 desktop-nav">
             <nav class="main-navbar">
               <ul class="main-menu">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="rooms.html">Rooms</a></li>
-                  <li class="active"><a href="about.html">About</a></li>
-                  <li><a href="events.html">Events</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                  <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Projects</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="events.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reservation.html">Press</a></li>
               </ul>
             </nav>
+          </div>
+          
+          <!-- Mobile Menu Toggle Button -->
+          <div class="mobile-menu-toggle">
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
         </div>
       </div>
     </header>
+      
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+      <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Projects</a></li>
+        <li class="active"><a href="about.html">About</a></li>
+        <li><a href="events.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="reservation.html">Press</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
     <!-- END head -->
 
     <section class="site-hero inner-page overlay" style="background-image: url(images/hero_4.jpg)" data-stellar-background-ratio="0.5">
@@ -74,15 +104,15 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-12 col-lg-7 ml-auto order-lg-2 position-relative mb-5" data-aos="fade-up">
-            <figure class="img-absolute">
+            <!-- <figure class="img-absolute">
               <img src="images/food-1.jpg" alt="Free Website Template by Templateux" class="img-fluid">
-            </figure>
+            </figure> -->
             <img src="images/img_1.jpg" alt="Image" class="img-fluid rounded">
           </div>
           <div class="col-md-12 col-lg-4 order-lg-1" data-aos="fade-up">
             <h2 class="heading">Welcome!</h2>
-            <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-            <p><a href="#" class="btn btn-primary text-white py-2 mr-3">Learn More</a> <span class="mr-3 font-family-serif"><em>or</em></span> <a href="https://vimeo.com/channels/staffpicks/93951774"  data-fancybox class="text-uppercase letter-spacing-1">See video</a></p>
+            <p class="mb-4">NAKI refers to the Dragon in traditional Khmer. Symbolizing traits as dominance, ambition, integrity, dignity and capacity, Naki is poised for growth and seeks to strengthen our presence in Asia as we build for the future.</p>
+            <p><a href="#" class="btn btn-primary text-white py-2 mr-3">Learn More</a> <span class="mr-3 font-family-serif"><em>or</em></span> <a href="https://www.youtube.com/watch?v=4Gg54voKyYg&t=8s"  data-fancybox class="text-uppercase letter-spacing-1">See video</a></p>
           </div>
           
         </div>
@@ -266,10 +296,10 @@ Meas was an active leader in the Cambodian-American Community of Washington. Fro
         <div class="container" >
           <div class="row align-items-center">
             <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
-              <h2 class="text-white font-weight-bold">A Best Place To Stay. Reserve Now!</h2>
+              <h2 class="text-white font-weight-bold">Read Our Latest Press &amp; Media Releases</h2>
             </div>
             <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
-              <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
+              <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">View Press Releases</a>
             </div>
           </div>
         </div>
@@ -280,25 +310,24 @@ Meas was an active leader in the Cambodian-American Community of Washington. Fro
         <div class="row mb-4">
           <div class="col-md-3 mb-5">
             <ul class="list-unstyled link">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Terms &amp; Conditions</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-             <li><a href="#">Rooms</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="rooms.html">Projects</a></li>
+              <li><a href="events.html">Careers</a></li>
+              <li><a href="reservation.html">Press &amp; Media</a></li>
             </ul>
           </div>
           <div class="col-md-3 mb-5">
             <ul class="list-unstyled link">
-              <li><a href="#">The Rooms &amp; Suites</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Restaurant</a></li>
+              <li><a href="rooms.html">Silvertown Metropolitan</a></li>
+              <li><a href="rooms.html">Woodland Residences</a></li>
+              <li><a href="rooms.html">Agile Sky Residence</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
           <div class="col-md-3 mb-5 pr-md-5 contact-info">
-            <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
-            <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span> National Assembly Road,Phnom Penh, Cambodia <br> Suite 721 New York NY 10016</span></p>
-            <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span> <span> (+855) 23-900-959</span></p>
-            <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span> <span> info@nakihospitality.com</span></p>
+            <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span> Diamond Twin Tower, 22nd Floor, Koh Pich, Phnom Penh, Cambodia</span></p>
+            <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span> <span> (+855) 23 868 959</span></p>
+            <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span> <span> info@nakigroup.com</span></p>
           </div>
           <div class="col-md-3 mb-5">
             <p>Sign up for our newsletter</p>
