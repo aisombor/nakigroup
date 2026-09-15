@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="skinGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE0D0" />
+      <stop offset="100%" stop-color="#F2B89B" />
+    </linearGradient>
+    <linearGradient id="dressGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="80" cy="80" r="80" fill="url(#bgGrad2)" />
+  <circle cx="80" cy="80" r="76" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+
+  <!-- Back Hair -->
+  <path d="M42 60 C38 95 44 135 50 145 C55 145 60 120 60 100" fill="#1C1917" />
+  <path d="M118 60 C122 95 116 135 110 145 C105 145 100 120 100 100" fill="#1C1917" />
+
+  <!-- Shoulders / Dress -->
+  <path d="M30 160 C30 124 52 112 80 112 C108 112 130 124 130 160 Z" fill="url(#dressGrad2)" />
+  <!-- Elegant V-neck -->
+  <polygon points="80,128 68,112 92,112" fill="#FFE0D0" />
+  <!-- Necklace -->
+  <path d="M72 120 Q80 126 88 120" stroke="#FEF3C7" stroke-width="2" fill="none" />
+  <circle cx="80" cy="125" r="2.5" fill="#FEF3C7" />
+
+  <!-- Neck -->
+  <rect x="72" y="94" width="16" height="22" rx="5" fill="#E8A987" />
+
+  <!-- Head / Face -->
+  <ellipse cx="80" cy="68" rx="27" ry="31" fill="url(#skinGrad2)" />
+
+  <!-- Ears & Earrings -->
+  <circle cx="52" cy="72" r="6" fill="#F2B89B" />
+  <circle cx="108" cy="72" r="6" fill="#F2B89B" />
+  <circle cx="52" cy="79" r="2.5" fill="#FCD34D" />
+  <circle cx="108" cy="79" r="2.5" fill="#FCD34D" />
+
+  <!-- Hair Front / Bangs -->
+  <path d="M52 64 C48 38 64 28 80 28 C96 28 112 38 108 64 C100 44 94 40 80 40 C66 40 60 44 52 64 Z" fill="#292524" />
+  <path d="M53 54 C60 42 75 42 85 46 C95 50 102 48 107 55 C100 42 88 36 78 36 C66 36 56 42 53 54 Z" fill="#44403C" />
+
+  <!-- Eyes with Eyelashes -->
+  <ellipse cx="69" cy="69" rx="3.5" ry="4.5" fill="#1C1917" />
+  <ellipse cx="91" cy="69" rx="3.5" ry="4.5" fill="#1C1917" />
+  <!-- Eye sparkles -->
+  <circle cx="70.5" cy="67.5" r="1.5" fill="#FFFFFF" />
+  <circle cx="92.5" cy="67.5" r="1.5" fill="#FFFFFF" />
+  <path d="M64 64 Q69 62 74 65" stroke="#1C1917" stroke-width="1.8" fill="none" />
+  <path d="M86 65 Q91 62 96 64" stroke="#1C1917" stroke-width="1.8" fill="none" />
+
+  <!-- Eyebrows -->
+  <path d="M64 60 Q70 57 75 60" stroke="#44403C" stroke-width="2" stroke-linecap="round" fill="none" />
+  <path d="M85 60 Q90 57 96 60" stroke="#44403C" stroke-width="2" stroke-linecap="round" fill="none" />
+
+  <!-- Nose -->
+  <path d="M78 72 Q80 75 82 74" stroke="#D97746" stroke-width="1.8" stroke-linecap="round" fill="none" />
+
+  <!-- Happy Lips -->
+  <path d="M72 82 Q80 90 88 82" stroke="#BE123C" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <!-- Rosy Cheeks -->
+  <circle cx="62" cy="76" r="5" fill="#FB7185" opacity="0.4" />
+  <circle cx="98" cy="76" r="5" fill="#FB7185" opacity="0.4" />
+</svg>
+

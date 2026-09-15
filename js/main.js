@@ -49,7 +49,7 @@
     nav:true,
     autoplayHoverPause: true,
     items: 1,
-    autoheight: false,
+    autoHeight: true,
     navText : ["<span class='ion-chevron-left'></span>","<span class='ion-chevron-right'></span>"],
     responsive:{
       0:{
@@ -68,31 +68,32 @@
 	});
 
 	// owl carousel
-	var majorCarousel = $('.js-carousel-1');
+	var majorCarousel = $('.js-carousel-1, .major-caousel');
 	majorCarousel.owlCarousel({
-    loop:true,
+    loop: true,
     autoplay: true,
-    stagePadding: 7,
+    stagePadding: 0,
     margin: 20,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
     nav: true,
     autoplayHoverPause: true,
     items: 3,
     navText : ["<span class='ion-chevron-left'></span>","<span class='ion-chevron-right'></span>"],
     responsive:{
       0:{
-        items:1,
-        nav:false
+        items: 1,
+        nav: false,
+        dots: true
       },
-      600:{
-        items:2,
-        nav:false
+      768:{
+        items: 2,
+        nav: true,
+        dots: true
       },
       1000:{
-        items:3,
-        nav:true,
-        loop:false
+        items: 3,
+        nav: true,
+        dots: true,
+        loop: true
       }
   	}
 	});

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="skinGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FED7AA" />
+      <stop offset="100%" stop-color="#FDBA74" />
+    </linearGradient>
+    <linearGradient id="suitGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="80" cy="80" r="80" fill="url(#bgGrad3)" />
+  <circle cx="80" cy="80" r="76" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2" />
+
+  <!-- Shoulders / Blazer -->
+  <path d="M28 160 C28 122 50 110 80 110 C110 110 132 122 132 160 Z" fill="url(#suitGrad3)" />
+  <!-- Shirt -->
+  <polygon points="80,126 66,110 94,110" fill="#E2E8F0" />
+  <!-- Red Silk Tie -->
+  <polygon points="76,114 84,114 87,146 80,154 73,146" fill="#DC2626" />
+
+  <!-- Neck -->
+  <rect x="70" y="92" width="20" height="24" rx="6" fill="#FBAA65" />
+
+  <!-- Head / Face -->
+  <ellipse cx="80" cy="68" rx="29" ry="33" fill="url(#skinGrad3)" />
+
+  <!-- Ears -->
+  <circle cx="50" cy="70" r="7" fill="#FBAA65" />
+  <circle cx="110" cy="70" r="7" fill="#FBAA65" />
+
+  <!-- Sleek Hair with side parting -->
+  <path d="M50 64 C48 40 64 30 80 30 C96 30 112 40 110 64 C104 46 96 42 78 42 C60 42 52 50 50 64 Z" fill="#475569" />
+  <path d="M50 54 C54 38 70 34 84 34 C98 34 108 40 110 50 C104 40 92 36 80 36 C66 36 54 42 50 54 Z" fill="#64748B" />
+
+  <!-- Glasses Frame -->
+  <rect x="58" y="60" width="19" height="15" rx="4" fill="rgba(255,255,255,0.25)" stroke="#0F172A" stroke-width="2.5" />
+  <rect x="83" y="60" width="19" height="15" rx="4" fill="rgba(255,255,255,0.25)" stroke="#0F172A" stroke-width="2.5" />
+  <line x1="77" y1="66" x2="83" y2="66" stroke="#0F172A" stroke-width="2.5" />
+  <line x1="51" y1="65" x2="58" y2="65" stroke="#0F172A" stroke-width="2" />
+  <line x1="102" y1="65" x2="109" y2="65" stroke="#0F172A" stroke-width="2" />
+
+  <!-- Eyes behind glasses -->
+  <ellipse cx="67.5" cy="67.5" rx="3.5" ry="4" fill="#0F172A" />
+  <ellipse cx="92.5" cy="67.5" rx="3.5" ry="4" fill="#0F172A" />
+  <circle cx="69" cy="66" r="1.2" fill="#FFFFFF" />
+  <circle cx="94" cy="66" r="1.2" fill="#FFFFFF" />
+
+  <!-- Eyebrows -->
+  <path d="M60 55 Q67 52 74 55" stroke="#475569" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <path d="M86 55 Q93 52 100 55" stroke="#475569" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Nose -->
+  <path d="M78 72 Q80 76 83 75" stroke="#C2410C" stroke-width="2" stroke-linecap="round" fill="none" />
+
+  <!-- Confident Executive Smile -->
+  <path d="M70 83 Q80 92 90 83" stroke="#9A3412" stroke-width="2.5" stroke-linecap="round" fill="none" />
+</svg>
+
