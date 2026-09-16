@@ -128,12 +128,20 @@ textarea.form-control {
     @media (max-width: 991.98px) {
       .site-logo a {
         font-size: 27px; } }
+.site-header .container-fluid {
+  padding-left: 120px;
+  padding-right: 120px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ===== Logo Wrapper Styles ===== */
 .logo-wrapper {
   height: 90px;
   display: flex;
   align-items: center;
-  padding-left: 15px;
+  padding-left: 0;
 }
 
 .site-logo-img {
@@ -145,6 +153,7 @@ textarea.form-control {
 /* ===== Desktop Navigation ===== */
 .desktop-nav {
   display: block !important;
+  padding-right: 0;
 }
 
 .main-navbar {
@@ -158,7 +167,7 @@ textarea.form-control {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 30px;
+  gap: 28px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -170,10 +179,11 @@ textarea.form-control {
 
 .main-menu li a {
   color: #0a3b61;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
 .main-menu li a:hover,
@@ -181,10 +191,24 @@ textarea.form-control {
   color: #ffba5a;
 }
 
+/* Laptop / Medium Desktop Spacing */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .site-header .container-fluid {
+    padding-left: 140px;
+    padding-right: 150px;
+  }
+  .main-menu {
+    gap: 16px;
+  }
+  .main-menu li a {
+    font-size: 15px;
+  }
+}
+
 /* ===== Mobile Menu Toggle Button ===== */
 .mobile-menu-toggle {
   display: none;
-  margin-right: 20px;
+  margin-right: 0;
 }
 
 .hamburger {
@@ -227,34 +251,38 @@ textarea.form-control {
   background: #0a3b61;
 }
 
-/* ===== Mobile Navigation ===== */
+/* ===== Mobile Navigation (Naki Group Style) ===== */
 .mobile-nav {
   position: fixed;
-  top: 0;
-  right: -100%;
-  width: 280px;
-  height: 100vh;
-  background: #fff;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-  transition: right 0.4s ease;
+  top: 74px;
+  left: 0;
+  width: 100%;
+  max-height: 0;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: max-height 0.4s ease, opacity 0.3s ease, visibility 0.3s ease;
   z-index: 9999;
-  padding-top: 100px;
-  overflow-y: auto;
-  pointer-events: auto;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  border-top: 1px solid #f1f5f9;
 }
 
 .mobile-nav.active {
-  right: 0;
+  max-height: 450px;
+  opacity: 1;
+  visibility: visible;
+  overflow-y: auto;
 }
 
 .mobile-menu {
   list-style: none;
-  padding: 0 20px;
+  padding: 10px 0;
   margin: 0;
 }
 
 .mobile-menu li {
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid #f3f4f6;
 }
 
 .mobile-menu li:last-child {
@@ -263,36 +291,34 @@ textarea.form-control {
 
 .mobile-menu li a {
   display: block;
-  padding: 15px 10px;
-  color: #0a3b61;
+  padding: 14px 30px;
+  color: #003764;
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   cursor: pointer;
-  position: relative;
-  z-index: 10000;
 }
 
 .mobile-menu li a:hover,
 .mobile-menu li.active a {
-  color: #ffba5a;
-  padding-left: 20px;
-  background: #f8f9fa;
+  color: #CEA277;
+  background: #fafafa;
+  padding-left: 36px;
 }
 
 /* ===== Mobile Overlay ===== */
 .mobile-overlay {
   position: fixed;
-  top: 0;
+  top: 74px;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
+  height: calc(100vh - 74px);
+  background: rgba(0, 0, 0, 0.4);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   z-index: 9998;
 }
 
@@ -306,24 +332,29 @@ textarea.form-control {
 @media (max-width: 991.98px) {
   /* Fix header for mobile */
   .site-header {
-    padding: 15px 0 !important;
-    background: #fff !important;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+    padding: 12px 0 !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
   
   .site-header.scrolled {
-    padding: 15px 0 !important;
+    padding: 12px 0 !important;
   }
   
   /* Logo adjustments */
   .logo-wrapper {
-    height: 60px;
-    padding-left: 15px;
+    height: 50px;
+    padding-left: 0;
   }
   
   .site-logo-img {
-    height: 50px !important;
-    max-height: 50px !important;
+    height: 48px !important;
+    max-height: 48px !important;
+    width: auto;
   }
   
   /* Hide desktop nav */
@@ -336,12 +367,13 @@ textarea.form-control {
     display: flex;
     align-items: center;
     margin-left: auto;
-    padding-right: 15px;
+    padding-right: 0;
   }
   
   /* Container adjustments */
   .site-header .container-fluid {
-    padding: 0;
+    padding-left: 70px !important;
+    padding-right: 70px !important;
   }
   
   .site-header .row {
@@ -351,18 +383,23 @@ textarea.form-control {
 
 /* Small mobile devices */
 @media (max-width: 576px) {
-  .mobile-nav {
-    width: 100%;
-    max-width: 300px;
+  .site-header .container-fluid {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
-  
+  .mobile-menu li a {
+    padding: 13px 20px;
+  }
+  .mobile-menu li a:hover,
+  .mobile-menu li.active a {
+    padding-left: 25px;
+  }
   .logo-wrapper {
-    height: 50px;
+    height: 48px;
   }
-  
   .site-logo-img {
-    height: 45px !important;
-    max-height: 45px !important;
+    height: 42px !important;
+    max-height: 42px !important;
   }
 }
 .site-navbar {
@@ -448,14 +485,17 @@ textarea.form-control {
   height: 100vh;
   min-height: 700px; }
   .site-hero-inner .heading {
-    font-size: 80px;
+    font-size: 62px;
     font-family: "Playfair Display", times, serif;
     color: #fff;
-    line-height: 1;
+    line-height: 1.2;
     font-weight: bold; }
     @media (max-width: 991.98px) {
       .site-hero-inner .heading {
         font-size: 40px; } }
+    @media (max-width: 576px) {
+      .site-hero-inner .heading {
+        font-size: 32px; } }
   .site-hero-inner .sub-heading {
     font-size: 30px;
     font-weight: 200;
@@ -464,6 +504,132 @@ textarea.form-control {
     @media (max-width: 991.98px) {
       .site-hero-inner .sub-heading {
         font-size: 18px; } }
+
+/* Ornate Vintage Royal Frame Style (Filigree Borders & Corners in #ffba5a) */
+.ornate-vintage-frame {
+  position: relative;
+  padding: 12px;
+  background: #ffffff;
+  border: 2px solid #ffba5a;
+  box-shadow: 0 12px 30px rgba(255, 186, 90, 0.2), inset 0 0 0 3px #ffffff, inset 0 0 0 5px #ffba5a;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  margin: 10px 0 20px 0;
+}
+
+.ornate-vintage-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(255, 186, 90, 0.32), inset 0 0 0 3px #ffffff, inset 0 0 0 5px #ffba5a;
+}
+
+/* Corner Filigrees */
+.ornate-corner {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background-image: url('../images/ornate-corner.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ornate-corner.top-left {
+  top: -2px;
+  left: -2px;
+}
+
+.ornate-corner.top-right {
+  top: -2px;
+  right: -2px;
+  transform: rotate(90deg);
+}
+
+.ornate-corner.bottom-left {
+  bottom: -2px;
+  left: -2px;
+  transform: rotate(-90deg);
+}
+
+.ornate-corner.bottom-right {
+  bottom: -2px;
+  right: -2px;
+  transform: rotate(180deg);
+}
+
+/* Center Crests */
+.ornate-crest {
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background-image: url('../images/ornate-center.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
+  pointer-events: none;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ornate-crest.top-crest {
+  top: -10px;
+}
+
+.ornate-crest.bottom-crest {
+  bottom: -10px;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.ornate-vintage-frame .media-showcase-box {
+  position: relative;
+  width: 100%;
+  height: 430px;
+  border-radius: 0;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid #ffba5a;
+  box-shadow: none;
+}
+
+.ornate-vintage-frame .media-showcase-box iframe,
+.ornate-vintage-frame .media-showcase-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+@media (max-width: 991.98px) {
+  .ornate-vintage-frame .media-showcase-box {
+    height: 330px;
+  }
+  .ornate-corner {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ornate-vintage-frame {
+    padding: 8px;
+    margin-bottom: 25px;
+  }
+  .ornate-vintage-frame .media-showcase-box {
+    height: 220px;
+  }
+  .ornate-corner {
+    width: 28px;
+    height: 28px;
+  }
+  .ornate-crest {
+    width: 44px;
+    height: 15px;
+  }
+}
 
 .inner-page .site-hero-inner {
   height: 50vh;
