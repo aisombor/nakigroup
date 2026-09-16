@@ -505,94 +505,63 @@ textarea.form-control {
       .site-hero-inner .sub-heading {
         font-size: 18px; } }
 
-/* Ornate Vintage Royal Frame Style (Filigree Borders & Corners in #ffba5a) */
-.ornate-vintage-frame {
-  position: relative;
-  padding: 12px;
-  background: #ffffff;
-  border: 2px solid #ffba5a;
-  box-shadow: 0 12px 30px rgba(255, 186, 90, 0.2), inset 0 0 0 3px #ffffff, inset 0 0 0 5px #ffba5a;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  margin: 10px 0 20px 0;
-}
-
-.ornate-vintage-frame:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(255, 186, 90, 0.32), inset 0 0 0 3px #ffffff, inset 0 0 0 5px #ffba5a;
-}
-
-/* Corner Filigrees */
-.ornate-corner {
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  background-image: url('../images/ornate-corner.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.ornate-corner.top-left {
-  top: -2px;
-  left: -2px;
-}
-
-.ornate-corner.top-right {
-  top: -2px;
-  right: -2px;
-  transform: rotate(90deg);
-}
-
-.ornate-corner.bottom-left {
-  bottom: -2px;
-  left: -2px;
-  transform: rotate(-90deg);
-}
-
-.ornate-corner.bottom-right {
-  bottom: -2px;
-  right: -2px;
-  transform: rotate(180deg);
-}
-
-/* Center Crests */
-.ornate-crest {
-  position: absolute;
-  width: 60px;
-  height: 20px;
-  background-image: url('../images/ornate-center.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 10;
-  pointer-events: none;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.ornate-crest.top-crest {
-  top: -10px;
-}
-
-.ornate-crest.bottom-crest {
-  bottom: -10px;
-  transform: translateX(-50%) rotate(180deg);
-}
-
-.ornate-vintage-frame .media-showcase-box {
+/* ===== Unified Duo Device Mockup (One Single Device) ===== */
+.duo-unified-device {
   position: relative;
   width: 100%;
-  height: 430px;
-  border-radius: 0;
+  max-width: 1150px;
+  margin: 10px auto;
+  background: #111317;
+  border-radius: 36px;
+  border: 3px solid #1c1f26;
+  outline: 2px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 
+    0 25px 60px rgba(0, 55, 100, 0.22),
+    0 10px 25px rgba(0, 0, 0, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  background: #000;
-  border: 1px solid #ffba5a;
-  box-shadow: none;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-.ornate-vintage-frame .media-showcase-box iframe,
-.ornate-vintage-frame .media-showcase-box img {
+.duo-unified-device:hover {
+  transform: translateY(-5px);
+  border-color: #272d38;
+  box-shadow: 
+    0 32px 70px rgba(0, 55, 100, 0.3),
+    0 14px 30px rgba(0, 0, 0, 0.22),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Dual Screen Wrapper */
+.duo-screen-wrapper {
+  display: flex;
+  width: 100%;
+  height: 460px;
+  background: #000000;
+  position: relative;
+}
+
+/* Individual Screens inside the single device */
+.duo-screen {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.duo-screen.duo-left-screen {
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.duo-screen.duo-right-screen {
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.duo-screen iframe,
+.duo-screen img {
   position: absolute;
   top: 0;
   left: 0;
@@ -600,34 +569,87 @@ textarea.form-control {
   height: 100%;
   border: none;
   object-fit: cover;
-  border-radius: 0;
+}
+
+/* Center Seam / Hinge */
+.duo-center-hinge {
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(to right, #0d0f12, #2a303c, #0d0f12);
+  position: relative;
+  z-index: 15;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.duo-center-hinge .hinge-line {
+  width: 2px;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+/* Screen Home Indicator Bars */
+.duo-screen-home-bar {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 4px;
+  z-index: 20;
+  pointer-events: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 991.98px) {
-  .ornate-vintage-frame .media-showcase-box {
-    height: 330px;
+  .duo-unified-device {
+    border-width: 9px;
+    border-radius: 28px;
   }
-  .ornate-corner {
-    width: 36px;
-    height: 36px;
+  .duo-screen-wrapper {
+    height: 350px;
+  }
+  .duo-screen.duo-left-screen {
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+  }
+  .duo-screen.duo-right-screen {
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
   }
 }
 
-@media (max-width: 576px) {
-  .ornate-vintage-frame {
-    padding: 8px;
-    margin-bottom: 25px;
+@media (max-width: 767.98px) {
+  .duo-screen-wrapper {
+    flex-direction: column;
+    height: auto;
   }
-  .ornate-vintage-frame .media-showcase-box {
-    height: 220px;
+  .duo-screen {
+    height: 230px;
   }
-  .ornate-corner {
-    width: 28px;
-    height: 28px;
+  .duo-screen.duo-left-screen {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 0;
   }
-  .ornate-crest {
-    width: 44px;
-    height: 15px;
+  .duo-screen.duo-right-screen {
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-right-radius: 0;
+  }
+  .duo-center-hinge {
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to bottom, #0d0f12, #2a303c, #0d0f12);
+  }
+  .duo-center-hinge .hinge-line {
+    width: 30%;
+    height: 2px;
   }
 }
 
