@@ -257,5 +257,38 @@
   };
   mobileMenuInit();
 
+  // Duo Device Video Expand & Play on Click
+  var duoDeviceInit = function() {
+    var duoDevice = document.getElementById('duo-device');
+    var playOverlay = document.getElementById('duo-play-overlay');
+    var toggleBtn = document.getElementById('duo-toggle-split');
+    var videoIframe = document.getElementById('duo-video-iframe');
+
+    if (!duoDevice || !playOverlay) return;
+
+    // Expand and start playback
+    playOverlay.addEventListener('click', function(e) {
+      e.preventDefault();
+      duoDevice.classList.add('video-expanded');
+      if (videoIframe) {
+        var baseSrc = "https://www.youtube.com/embed/4Gg54voKyYg?autoplay=1&enablejsapi=1&rel=0";
+        if (videoIframe.src !== baseSrc) {
+          videoIframe.src = baseSrc;
+        } else {
+          videoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+        }
+      }
+    });
+
+    // Toggle Back to Split View
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        duoDevice.classList.remove('video-expanded');
+      });
+    }
+  };
+  duoDeviceInit();
 
 })(jQuery);

@@ -106,11 +106,19 @@
         <div class="row justify-content-center">
           <div class="col-12" data-aos="fade-up">
             <!-- Unified Duo Device (One Single Device with Dual Screens) -->
-            <div class="duo-unified-device">
+            <div class="duo-unified-device" id="duo-device">
+              <!-- Toggle back to Split Screen button -->
+              <button class="duo-toggle-split-btn" id="duo-toggle-split" title="Switch back to Split View">
+                <i class="fa fa-columns"></i> Split Screen
+              </button>
+
               <div class="duo-screen-wrapper">
-                <!-- Left Display: Video Player -->
+                <!-- Left Display: Video Player (Expands to 100% on Play) -->
                 <div class="duo-screen duo-left-screen">
-                  <iframe src="https://www.youtube.com/embed/4Gg54voKyYg" title="Naki Group Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  <!-- Click to Expand Trigger -->
+                  <div class="duo-play-overlay" id="duo-play-overlay" title="Click to Expand and Play"></div>
+                  
+                  <iframe id="duo-video-iframe" src="https://www.youtube.com/embed/4Gg54voKyYg?enablejsapi=1&rel=0" title="Naki Group Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                   <div class="duo-screen-home-bar"></div>
                 </div>
                 
@@ -139,13 +147,12 @@
             <p data-aos="fade-up">We help our clients develop a vision, strategy, plan, and implement those deliverables with the highest international standards.</p>
           </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center text-center">
           <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="media media-custom d-block mb-4 h-100">
-              <div class="media-custom-img mb-4"><img src="images/img_1.jpg" alt="Build - Naki Development" class="img-fluid"></div>
+            <div class="media media-custom d-block mb-4 h-100 text-center">
+              <div class="media-custom-img mb-4"><img src="images/img_1.jpg" alt="Build - Naki Development" class="img-fluid mx-auto rounded"></div>
               <div class="media-body">
-                <!-- <span class="meta-post">February 26, 2018</span> -->
                 <h2 class="mt-0 mb-3 font-weight-bold">Build</h2>
                 <p>Naki Development With combined experiences in property, we have achieved great heights in project acquisition and quality construction management.</p>
               </div>
@@ -153,20 +160,18 @@
 
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
-            <div class="media media-custom d-block mb-4 h-100">
-              <div class="media-custom-img mb-4"><img src="images/img_2.jpg" alt="Live - Naki Hospitality" class="img-fluid"></div>
+            <div class="media media-custom d-block mb-4 h-100 text-center">
+              <div class="media-custom-img mb-4"><img src="images/img_2.jpg" alt="Live - Naki Hospitality" class="img-fluid mx-auto rounded"></div>
               <div class="media-body">
-                <!-- <span class="meta-post">February 26, 2018</span> -->
                 <h2 class="mt-0 mb-3 font-weight-bold">Live</h2>
                 <p>Naki Hospitality Naki Hospitality aims to offer a high quality standard of stay to our customers. From long stay to short stay, we ensure world class accommodation coupled with services of convenience.</p>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="300">
-            <div class="media media-custom d-block mb-4 h-100">
-              <div class="media-custom-img mb-4"><img src="images/img_3.jpg" alt="Grow - Naki Realty" class="img-fluid"></div>
+            <div class="media media-custom d-block mb-4 h-100 text-center">
+              <div class="media-custom-img mb-4"><img src="images/img_3.jpg" alt="Grow - Naki Realty" class="img-fluid mx-auto rounded"></div>
               <div class="media-body">
-                <!-- <span class="meta-post">February 26, 2018</span> -->
                 <h2 class="mt-0 mb-3 font-weight-bold">Grow</h2>
                 <p>Naki Realty Naki Realty is an international real estate and asset manager. At Naki Realty, adhering to the highest levels of customer service is our number one priority.</p>
               </div>
