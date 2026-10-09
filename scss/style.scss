@@ -1185,7 +1185,7 @@ textarea.form-control {
 		position: relative;
 		overflow: hidden;
 		height: 100%;
-		min-height: 380px;
+		min-height: 420px;
 		background-color: #f8fafc;
 		a {
 			display: block;
@@ -1195,26 +1195,34 @@ textarea.form-control {
 		img {
 			width: 100%;
 			height: 100%;
-			min-height: 380px;
+			min-height: 420px;
 			object-fit: cover;
 			object-position: center center;
 			display: block;
 			transition: transform .45s ease;
 		}
 		@include media-breakpoint-up(lg) {
-			min-height: 420px;
+			min-height: 440px;
 			height: 100%;
 			img {
-				min-height: 420px;
+				min-height: 440px;
 			}
 		}
 		@include media-breakpoint-down(md) {
 			margin-bottom: 0;
-			height: 320px;
-			min-height: 320px;
+			height: 420px;
+			min-height: 420px;
 			img {
-				height: 320px;
-				min-height: 320px;
+				height: 420px;
+				min-height: 420px;
+			}
+		}
+		@include media-breakpoint-down(xs) {
+			height: 440px;
+			min-height: 440px;
+			img {
+				height: 440px;
+				min-height: 440px;
 			}
 		}
 	}
