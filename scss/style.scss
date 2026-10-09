@@ -232,6 +232,7 @@ textarea.form-control {
 	min-height: 700px;	
 	width: 100%;
 	position: relative;
+	overflow: hidden;
 	.heading {
 		font-family: $font-family-serif;
 		font-weight: bold;
@@ -241,30 +242,63 @@ textarea.form-control {
 		bottom: 20px;
 		left: 50%;
 		transform: translateX(-50%);
-		color :$white;
+		color: $white;
+		z-index: 5;
 	}
 	&.overlay {
 		&:before {
 			background: rgba(0,0,0,.45);
 			content: "";
 			position: absolute;
-			height: 100vh;
-			min-height: 700px;	
+			height: 100%;
 			top: 0;
 			left: 0;
 			bottom: 0;
 			right: 0;
+			z-index: 1;
 		}
 	}
 	&.inner-page {
-		height: 50vh;
-		min-height: 700px;	
+		height: 75vh;
+		min-height: 600px;	
 		&.overlay {
 			&:before {
-				height: 50vh;
-				min-height: 700px;	
+				height: 100%;
+				min-height: 600px;	
 			}
 		}
+	}
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+	.mouse {
+		position: absolute;
+		z-index: 3;
+	}
+}
+
+.site-hero-bg {
+	position: absolute;
+	top: -15%;
+	left: 0;
+	width: 100%;
+	height: 130%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	z-index: 0;
+	animation: heroPanUpward 16s ease-in-out infinite alternate;
+	will-change: transform;
+	pointer-events: none;
+}
+
+@keyframes heroPanUpward {
+	0% {
+		transform: translateY(8%);
+	}
+	100% {
+		transform: translateY(-8%);
 	}
 }
 
@@ -294,8 +328,8 @@ textarea.form-control {
 }
 .inner-page {
 	.site-hero-inner {
-		height: 50vh;
-		min-height: 700px;
+		height: 75vh;
+		min-height: 600px;
 	}
 }
 .page-inside {
@@ -521,10 +555,13 @@ textarea.form-control {
 
 	.media-custom {
 		background: $white;
-		transition: .3s all ease;
-		box-shadow: 0 2px 5px -2px rgba(0,0,0,.1);
+		border-radius: 14px;
+		overflow: hidden;
+		transition: transform .35s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow .35s cubic-bezier(0.165, 0.84, 0.44, 1);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 		&:hover, &:focus {
-			box-shadow: 0 10px 30px -10px rgba(0,0,0,.1);
+			transform: translateY(-10px);
+			box-shadow: 0 22px 45px -10px rgba(0, 0, 0, 0.16), 0 10px 20px -5px rgba(0, 0, 0, 0.06);
 		}	
 		a {
 			color: $black;
@@ -533,7 +570,7 @@ textarea.form-control {
 			}
 		}
 		.media-body {
-			padding: 10px 30px;
+			padding: 15px 25px 25px 25px;
 		}
 		h2 {
 			font-size: 26px;
@@ -1121,10 +1158,16 @@ textarea.form-control {
 
 .site-block-half {
 	margin-bottom: 30px;
-	border-radius: 10px;
+	border-radius: 12px;
 	overflow: hidden;
+	background: $white;
 	box-shadow: 0 4px 15px rgba(0,0,0,.05);
 	border: 1px solid #eee;
+	transition: transform .35s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow .35s cubic-bezier(0.165, 0.84, 0.44, 1);
+	&:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15), 0 8px 16px -4px rgba(0, 0, 0, 0.06);
+	}
 
 	.image, .text {
 		width: 100%;
@@ -1134,11 +1177,19 @@ textarea.form-control {
 	}
 	.image {
 		min-height: 250px;
+		overflow: hidden;
+		position: relative;
+		background-size: cover;
+		background-position: center center;
+		transition: transform .45s ease;
 		@include media-breakpoint-down(md) {
 			margin-bottom: 0;
 			height: 220px;
 			min-height: 220px;
 		}
+	}
+	&:hover .image {
+		transform: scale(1.04);
 	}
 	.text {
 		padding: 1.5rem;
