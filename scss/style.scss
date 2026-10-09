@@ -888,6 +888,7 @@ textarea.form-control {
 .footer-section {
 	background: lighten($black, 10%);
 	color: $white;
+	padding: 45px 0 25px 0 !important;
 	a {
 		color: rgba(255,255,255,.7);
 		&:hover {
@@ -895,22 +896,27 @@ textarea.form-control {
 		}
 	}
 	p {
-		color: rgba(255,255,255,.5);
+		color: rgba(255,255,255,.65);
+		margin-bottom: 12px;
 	}
 	.bordertop {
 		border-top: 1px solid rgba(255,255,255,.1);
 		padding-top: 20px;
+		margin-top: 10px;
 	}
 	.contact-info {
 		span.d-block {
 			font-style: italic;
 			color: $white;
 		}
+		p {
+			margin-bottom: 12px;
+		}
 	}
 	.social {
 		a {
 			font-size: 18px;
-			padding: 10px;
+			padding: 8px 10px;
 		}
 	}
 	.link {

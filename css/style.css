@@ -1298,22 +1298,27 @@ textarea.form-control {
 
 .footer-section {
   background: #1a1a1a;
-  color: #fff; }
+  color: #fff;
+  padding: 45px 0 25px 0 !important; }
   .footer-section a {
     color: rgba(255, 255, 255, 0.7); }
     .footer-section a:hover {
       color: #fff; }
   .footer-section p {
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 12px; }
   .footer-section .bordertop {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px; }
+    padding-top: 20px;
+    margin-top: 10px; }
   .footer-section .contact-info span.d-block {
     font-style: italic;
     color: #fff; }
+  .footer-section .contact-info p {
+    margin-bottom: 12px; }
   .footer-section .social a {
     font-size: 18px;
-    padding: 10px; }
+    padding: 8px 10px; }
   .footer-section .link li {
     margin-bottom: 10px; }
 
