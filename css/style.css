@@ -1460,19 +1460,20 @@ textarea.form-control {
 
 /* Mouse Animation */
 .mouse {
-  width: 100px;
+  width: auto;
   display: inline-block;
   position: absolute;
   left: 50%;
   bottom: 140px;
-  z-index: 1;
-  -webkit-transform: translateX(-25%);
-  -ms-transform: translateX(-25%);
-  transform: translateX(-25%); }
+  z-index: 3;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
 
 .mouse-icon {
   width: 25px;
   height: 45px;
+  margin: 0 auto;
   border: 2px solid white;
   border-radius: 15px;
   cursor: pointer;
@@ -2172,15 +2173,30 @@ textarea.form-control {
 .custom-breadcrumbs {
   list-style: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  display: inline-grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 10px; }
   .custom-breadcrumbs li {
     display: inline-block;
     color: #fff;
-    margin: 0 4px;
+    margin: 0;
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: .1em;
-    font-weight: bold; }
+    font-weight: bold;
+    white-space: nowrap; }
+    .custom-breadcrumbs li:first-child {
+      justify-self: end;
+      text-align: right; }
+    .custom-breadcrumbs li:nth-child(2) {
+      justify-self: center;
+      text-align: center;
+      letter-spacing: 0; }
+    .custom-breadcrumbs li:last-child {
+      justify-self: start;
+      text-align: left; }
     .custom-breadcrumbs li a {
       font-weight: normal; }
       .custom-breadcrumbs li a:hover {

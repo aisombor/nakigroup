@@ -1102,17 +1102,17 @@ textarea.form-control {
 
 /* Mouse Animation */
 .mouse{
-  // margin: 50px auto;
-  width: 100px;
+  width: auto;
   display: inline-block;
   position: absolute;
   left: 50%;
   bottom: 140px;
-  z-index: 1;
-  transform: translateX(-25%);
+  z-index: 3;
+  transform: translateX(-50%);
 }.mouse-icon{
    width: 25px;
    height: 45px;
+   margin: 0 auto;
    border: 2px solid white;
    border-radius: 15px;
    cursor: pointer;
@@ -1696,14 +1696,32 @@ select {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	display: inline-grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	gap: 10px;
 	li {
 		display: inline-block;
 		color: $white;
-		margin: 0 4px;
+		margin: 0;
 		text-transform: uppercase;
 		font-size: 14px;
 		letter-spacing: .1em;
 		font-weight: bold;
+		white-space: nowrap;
+		&:first-child {
+			justify-self: end;
+			text-align: right;
+		}
+		&:nth-child(2) {
+			justify-self: center;
+			text-align: center;
+			letter-spacing: 0;
+		}
+		&:last-child {
+			justify-self: start;
+			text-align: left;
+		}
 		a {
 			font-weight: normal;
 			&:hover {
