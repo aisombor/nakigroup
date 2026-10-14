@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HR Recruitment Portal &ndash; Naki Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,600,700|Playfair+Display:400,700">
+  
+  <style>
+    :root {
+      --primary: #0f2b5c;
+      --secondary: #CEA277;
+      --dark: #1a2238;
+      --light-bg: #f8fafc;
+      --border: #e2e8f0;
+    }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--light-bg);
+      color: #334155;
+      min-height: 100vh;
+    }
+    .navbar-admin {
+      background: var(--primary);
+      border-bottom: 3px solid var(--secondary);
+      padding: 12px 24px;
+    }
+    .navbar-admin .brand-logo {
+      height: 38px;
+    }
+    .stat-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 22px 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .stat-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(15, 43, 92, 0.08);
+    }
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+    }
+    .stat-number {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: #64748b;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .admin-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+    .admin-card-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .nav-tabs-admin {
+      border-bottom: none;
+    }
+    .nav-tabs-admin .nav-link {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #64748b;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-right: 8px;
+      transition: all 0.2s ease;
+    }
+    .nav-tabs-admin .nav-link:hover {
+      background: #f1f5f9;
+      color: var(--primary);
+    }
+    .nav-tabs-admin .nav-link.active {
+      background: var(--primary);
+      color: #ffffff;
+    }
+    .btn-naki-gold {
+      background: linear-gradient(135deg, #CEA277, #b88a5d);
+      color: #ffffff !important;
+      font-weight: 600;
+      border: none;
+    }
+    .btn-naki-gold:hover {
+      background: linear-gradient(135deg, #dfb489, #CEA277);
+      box-shadow: 0 4px 14px rgba(206, 162, 119, 0.4);
+    }
+    .table-admin th {
+      background: #f8fafc;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #475569;
+      font-weight: 700;
+      border-top: none;
+      border-bottom: 2px solid var(--border);
+      padding: 14px 16px;
+    }
+    .table-admin td {
+      padding: 14px 16px;
+      vertical-align: middle;
+      font-size: 0.92rem;
+      border-top: 1px solid var(--border);
+    }
+    .badge-status {
+      font-size: 0.78rem;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-pending { background: #fff7ed; color: #c2410c; }
+    .badge-reviewed { background: #eff6ff; color: #1d4ed8; }
+    .badge-shortlisted { background: #f0fdf4; color: #15803d; }
+    .badge-rejected { background: #fef2f2; color: #b91c1c; }
+    .badge-open { background: #ecfdf5; color: #047857; }
+    .badge-closed { background: #f1f5f9; color: #64748b; }
+    
+    /* Login Box */
+    .login-container {
+      max-width: 440px;
+      margin: 80px auto;
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 45px rgba(15, 43, 92, 0.12);
+      overflow: hidden;
+    }
+    .login-header {
+      background: var(--primary);
+      padding: 30px;
+      text-align: center;
+      color: #ffffff;
+      border-bottom: 3px solid var(--secondary);
+    }
+    .login-body {
+      padding: 35px 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- 1. LOGIN SCREEN (Shown if not logged in)   -->
+  <!-- ========================================== -->
+  <div id="login-screen" style="display: none;">
+    <div class="login-container">
+      <div class="login-header">
+        <img src="https://nakigroup.com/wp-content/uploads/2022/08/NKG-Logo-Header.png" alt="Naki Group" style="height: 44px; filter: brightness(0) invert(1);" class="mb-3">
+        <h4 class="mb-1 font-weight-bold" style="letter-spacing: 0.5px;">HR Recruitment Portal</h4>
+        <p class="small text-white-50 mb-0">Sign in to manage job openings and candidate CVs</p>
+      </div>
+      <div class="login-body">
+        <div id="login-alert" style="display: none;" class="alert alert-danger small"></div>
+        <form id="login-form">
+          <div class="form-group mb-3">
+            <label for="login-username" class="font-weight-bold small text-muted">USERNAME OR EMAIL</label>
+            <div class="input-group">
+              <div class="input-group-prepend"><span class="input-group-text bg-white"><i class="fa fa-user text-muted"></i></span></div>
+              <input type="text" id="login-username" class="form-control" placeholder="admin" value="admin" required autofocus>
+            </div>
+          </div>
+          <div class="form-group mb-4">
+            <label for="login-password" class="font-weight-bold small text-muted">PASSWORD</label>
+            <div class="input-group">
+              <div class="input-group-prepend"><span class="input-group-text bg-white"><i class="fa fa-lock text-muted"></i></span></div>
+              <input type="password" id="login-password" class="form-control" placeholder="admin123" value="admin123" required>
+            </div>
+            <small class="form-text text-muted">Default HR Login: <code>admin</code> / <code>admin123</code></small>
+          </div>
+          <button type="submit" id="btn-login-submit" class="btn btn-primary btn-block py-2 font-weight-bold" style="background: var(--primary); border: none;">
+            <i class="fa fa-sign-in mr-2"></i> Sign In to Portal
+          </button>
+        </form>
+        <div class="text-center mt-4">
+          <a href="careers.html" class="small text-muted"><i class="fa fa-arrow-left mr-1"></i> Back to Careers Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 2. MAIN HR DASHBOARD (Shown when logged in) -->
+  <!-- ========================================== -->
+  <div id="dashboard-screen" style="display: none;">
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-dark navbar-admin">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="https://nakigroup.com/wp-content/uploads/2022/08/NKG-Logo-Header.png" alt="Naki Group Logo" class="brand-logo mr-3" style="filter: brightness(0) invert(1);">
+          <span class="font-weight-bold" style="font-size: 1.1rem; letter-spacing: 0.5px;">HR &amp; Recruitment Management</span>
+        </a>
+        <div class="d-flex align-items-center">
+          <a href="careers.html" target="_blank" class="btn btn-outline-light btn-sm mr-3">
+            <i class="fa fa-external-link mr-1"></i> View Website
+          </a>
+          <span class="text-white-50 small mr-3 d-none d-md-inline" id="user-display-name">
+            <i class="fa fa-user-circle mr-1"></i> HR Admin
+          </span>
+          <button class="btn btn-danger btn-sm" id="btn-logout" title="Logout">
+            <i class="fa fa-sign-out mr-1"></i> Logout
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid py-4 px-md-5">
+
+      <!-- Metrics Row -->
+      <div class="row mb-4">
+        <div class="col-xl-3 col-sm-6 col-12 mb-3">
+          <div class="stat-card d-flex align-items-center justify-content-between">
+            <div>
+              <div class="stat-number" id="stat-total-jobs">0</div>
+              <div class="stat-label">Total Jobs</div>
+            </div>
+            <div class="stat-icon" style="background: #e0f2fe; color: #0284c7;"><i class="fa fa-briefcase"></i></div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12 mb-3">
+          <div class="stat-card d-flex align-items-center justify-content-between">
+            <div>
+              <div class="stat-number text-success" id="stat-open-jobs">0</div>
+              <div class="stat-label">Active / Open</div>
+            </div>
+            <div class="stat-icon" style="background: #dcfce7; color: #16a34a;"><i class="fa fa-check-circle"></i></div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12 mb-3">
+          <div class="stat-card d-flex align-items-center justify-content-between">
+            <div>
+              <div class="stat-number" style="color: #9333ea;" id="stat-total-applicants">0</div>
+              <div class="stat-label">Total Applicants</div>
+            </div>
+            <div class="stat-icon" style="background: #f3e8ff; color: #9333ea;"><i class="fa fa-users"></i></div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12 mb-3">
+          <div class="stat-card d-flex align-items-center justify-content-between">
+            <div>
+              <div class="stat-number text-warning" id="stat-pending-reviews">0</div>
+              <div class="stat-label">Pending Reviews</div>
+            </div>
+            <div class="stat-icon" style="background: #fef3c7; color: #d97706;"><i class="fa fa-clock-o"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Tabs -->
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <ul class="nav nav-tabs nav-tabs-admin" id="adminTabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="jobs-tab" data-toggle="tab" href="#tab-jobs" role="tab">
+                <i class="fa fa-briefcase mr-1"></i> Job Postings (<span id="tab-jobs-count">0</span>)
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="applicants-tab" data-toggle="tab" href="#tab-applicants" role="tab">
+                <i class="fa fa-file-text-o mr-1"></i> Candidate Applications (<span id="tab-applicants-count">0</span>)
+              </a>
+            </li>
+          </ul>
+
+          <div id="tab-header-actions">
+            <button class="btn btn-naki-gold px-3" data-toggle="modal" data-target="#jobModal" onclick="prepareCreateJobModal()">
+              <i class="fa fa-plus-circle mr-1"></i> Post New Job
+            </button>
+          </div>
+        </div>
+
+        <div class="tab-content">
+          <!-- TAB 1: JOBS TABLE -->
+          <div class="tab-pane fade show active" id="tab-jobs" role="tabpanel">
+            <div class="table-responsive">
+              <table class="table table-hover table-admin mb-0">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Job Title</th>
+                    <th>Department</th>
+                    <th>Type</th>
+                    <th>Location</th>
+                    <th>Applicants</th>
+                    <th>Status</th>
+                    <th class="text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="jobs-table-body">
+                  <tr><td colspan="8" class="text-center py-4 text-muted"><i class="fa fa-spinner fa-spin mr-2"></i> Loading jobs...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TAB 2: CANDIDATE APPLICATIONS TABLE -->
+          <div class="tab-pane fade" id="tab-applicants" role="tabpanel">
+            <div class="p-3 bg-light border-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+              <div class="d-flex align-items-center">
+                <span class="mr-2 font-weight-bold small text-muted">FILTER STATUS:</span>
+                <select class="form-control form-control-sm d-inline-block w-auto" id="filter-app-status" onchange="loadApplications()">
+                  <option value="all">All Applications</option>
+                  <option value="pending">Pending</option>
+                  <option value="reviewed">Reviewed</option>
+                  <option value="shortlisted">Shortlisted</option>
+                  <option value="rejected">Rejected</option>
+                </select>
+              </div>
+              <button class="btn btn-sm btn-outline-secondary" onclick="loadApplications()">
+                <i class="fa fa-refresh mr-1"></i> Refresh
+              </button>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-hover table-admin mb-0">
+                <thead>
+                  <tr>
+                    <th>Candidate</th>
+                    <th>Contact</th>
+                    <th>Applied Position</th>
+                    <th>Date Applied</th>
+                    <th>Status</th>
+                    <th>CV File</th>
+                    <th class="text-right">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="applicants-table-body">
+                  <tr><td colspan="7" class="text-center py-4 text-muted"><i class="fa fa-spinner fa-spin mr-2"></i> Loading applications...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 3. JOB CREATE / EDIT MODAL                 -->
+  <!-- ========================================== -->
+  <div class="modal fade" id="jobModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content" style="border-radius: 14px; overflow: hidden; border: none;">
+        <div class="modal-header" style="background: var(--primary); color: #fff;">
+          <h5 class="modal-title font-weight-bold" id="jobModalTitle"><i class="fa fa-briefcase mr-2"></i> Post New Job Opening</h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form id="job-form">
+          <input type="hidden" id="job-edit-id" value="">
+          <div class="modal-body p-4">
+            <div id="job-modal-alert" style="display: none;" class="alert alert-danger small mb-3"></div>
+
+            <div class="row">
+              <div class="col-md-8 form-group">
+                <label for="job-title-input" class="font-weight-bold small">JOB TITLE *</label>
+                <input type="text" id="job-title-input" class="form-control" placeholder="e.g. Senior Property Development Manager" required>
+              </div>
+              <div class="col-md-4 form-group">
+                <label for="job-dept-input" class="font-weight-bold small">DEPARTMENT *</label>
+                <input type="text" id="job-dept-input" class="form-control" placeholder="e.g. Development, Hospitality, Sales" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4 form-group">
+                <label for="job-type-input" class="font-weight-bold small">JOB TYPE</label>
+                <select id="job-type-input" class="form-control">
+                  <option value="Full-Time">Full-Time</option>
+                  <option value="Part-Time">Part-Time</option>
+                  <option value="Contract">Contract</option>
+                  <option value="Internship">Internship</option>
+                </select>
+              </div>
+              <div class="col-md-4 form-group">
+                <label for="job-loc-input" class="font-weight-bold small">LOCATION</label>
+                <input type="text" id="job-loc-input" class="form-control" value="Phnom Penh, Cambodia">
+              </div>
+              <div class="col-md-4 form-group">
+                <label for="job-status-input" class="font-weight-bold small">STATUS</label>
+                <select id="job-status-input" class="form-control">
+                  <option value="open">Open (Active)</option>
+                  <option value="closed">Closed (Hidden)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label for="job-exp-input" class="font-weight-bold small">EXPERIENCE LEVEL</label>
+                <input type="text" id="job-exp-input" class="form-control" placeholder="e.g. Mid-Level (3+ yrs)">
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="job-salary-input" class="font-weight-bold small">SALARY RANGE</label>
+                <input type="text" id="job-salary-input" class="form-control" placeholder="e.g. Competitive / Negotiable">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="job-desc-input" class="font-weight-bold small">JOB DESCRIPTION / SUMMARY *</label>
+              <textarea id="job-desc-input" class="form-control" rows="3" placeholder="Overview of the position..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="job-req-input" class="font-weight-bold small">REQUIREMENTS &amp; QUALIFICATIONS</label>
+              <textarea id="job-req-input" class="form-control" rows="2" placeholder="Required education, skills, and background..."></textarea>
+            </div>
+
+            <div class="form-group mb-0">
+              <label for="job-resp-input" class="font-weight-bold small">RESPONSIBILITIES</label>
+              <textarea id="job-resp-input" class="form-control" rows="2" placeholder="Key day-to-day duties..."></textarea>
+            </div>
+          </div>
+          <div class="modal-footer bg-light">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="submit" id="btn-save-job" class="btn btn-primary" style="background: var(--primary);">Save Job</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 4. APPLICATION DETAILS MODAL               -->
+  <!-- ========================================== -->
+  <div class="modal fade" id="appDetailsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="border-radius: 14px; overflow: hidden; border: none;">
+        <div class="modal-header" style="background: var(--primary); color: #fff;">
+          <h5 class="modal-title font-weight-bold"><i class="fa fa-user mr-2"></i> Applicant Details</h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-4" id="app-modal-content">
+          <!-- Filled dynamically -->
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+    // Auto-detect localhost vs production (Render.com)
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const PRODUCTION_API_URL = 'https://naki-group-backend.onrender.com/api';
+    const API_BASE_URL = isLocal ? 'http://localhost:5000/api' : PRODUCTION_API_URL;
+    let currentAuthToken = localStorage.getItem('naki_hr_token') || '';
+    let cachedAdminJobs = [];
+
+    document.addEventListener('DOMContentLoaded', function () {
+      checkAuth();
+      setupAuthHandlers();
+      setupJobFormHandler();
+    });
+
+    /**
+     * Check if user is already authenticated
+     */
+    async function checkAuth() {
+      if (!currentAuthToken) {
+        showLoginScreen();
+        return;
+      }
+
+      try {
+        const res = await fetch(`${API_BASE_URL}/auth/me`, {
+          headers: { 'Authorization': `Bearer ${currentAuthToken}` }
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          document.getElementById('user-display-name').innerHTML = `<i class="fa fa-user-circle mr-1"></i> ${escapeHtml(data.user.full_name)} (${escapeHtml(data.user.username)})`;
+          showDashboardScreen();
+          loadDashboardData();
+        } else {
+          logout();
+        }
+      } catch (err) {
+        console.error('Auth verification error:', err);
+        // Show dashboard with token in case offline or let user retry
+        showDashboardScreen();
+        loadDashboardData();
+      }
+    }
+
+    function showLoginScreen() {
+      document.getElementById('login-screen').style.display = 'block';
+      document.getElementById('dashboard-screen').style.display = 'none';
+    }
+
+    function showDashboardScreen() {
+      document.getElementById('login-screen').style.display = 'none';
+      document.getElementById('dashboard-screen').style.display = 'block';
+    }
+
+    function logout() {
+      localStorage.removeItem('naki_hr_token');
+      currentAuthToken = '';
+      showLoginScreen();
+    }
+
+    /**
+     * Login Form Submission
+     */
+    function setupAuthHandlers() {
+      const loginForm = document.getElementById('login-form');
+      const logoutBtn = document.getElementById('btn-logout');
+      const alertBox = document.getElementById('login-alert');
+
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', logout);
+      }
+
+      if (loginForm) {
+        loginForm.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          const username = document.getElementById('login-username').value.trim();
+          const password = document.getElementById('login-password').value;
+          const submitBtn = document.getElementById('btn-login-submit');
+
+          alertBox.style.display = 'none';
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin mr-1"></i> Signing In...';
+
+          try {
+            const res = await fetch(`${API_BASE_URL}/auth/login`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ username, password })
+            });
+            const data = await res.json();
+
+            if (res.ok && data.success) {
+              currentAuthToken = data.token;
+              localStorage.setItem('naki_hr_token', data.token);
+              document.getElementById('user-display-name').innerHTML = `<i class="fa fa-user-circle mr-1"></i> ${escapeHtml(data.user.fullName)} (${escapeHtml(data.user.username)})`;
+              showDashboardScreen();
+              loadDashboardData();
+            } else {
+              alertBox.textContent = data.message || 'Invalid username or password.';
+              alertBox.style.display = 'block';
+            }
+          } catch (err) {
+            alertBox.textContent = 'Network error: Cannot reach Backend Server on port 5000.';
+            alertBox.style.display = 'block';
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa fa-sign-in mr-2"></i> Sign In to Portal';
+          }
+        });
+      }
+    }
+
+    /**
+     * Load Dashboard Data
+     */
+    function loadDashboardData() {
+      loadJobsAdmin();
+      loadApplications();
+    }
+
+    /**
+     * Load Jobs for Admin
+     */
+    async function loadJobsAdmin() {
+      const tbody = document.getElementById('jobs-table-body');
+      try {
+        const res = await fetch(`${API_BASE_URL}/jobs/admin/all`, {
+          headers: { 'Authorization': `Bearer ${currentAuthToken}` }
+        });
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          cachedAdminJobs = data.data;
+          renderJobsTable(cachedAdminJobs);
+          updateMetrics();
+        } else {
+          tbody.innerHTML = `<tr><td colspan="8" class="text-center py-4 text-danger">${data.message || 'Error loading jobs'}</td></tr>`;
+        }
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="8" class="text-center py-4 text-danger">Failed to connect to API</td></tr>`;
+      }
+    }
+
+    function renderJobsTable(jobs) {
+      const tbody = document.getElementById('jobs-table-body');
+      document.getElementById('tab-jobs-count').textContent = jobs.length;
+
+      if (jobs.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8" class="text-center py-5 text-muted">No jobs posted yet. Click "+ Post New Job" to create one.</td></tr>`;
+        return;
+      }
+
+      let html = '';
+      jobs.forEach(function (j) {
+        const statusBadge = j.status === 'open' 
+          ? '<span class="badge badge-status badge-open">Open</span>' 
+          : '<span class="badge badge-status badge-closed">Closed</span>';
+        
+        html += `
+          <tr>
+            <td><strong class="text-muted">#${j.id}</strong></td>
+            <td>
+              <div class="font-weight-bold text-dark">${escapeHtml(j.title)}</div>
+              <small class="text-muted">${escapeHtml(j.experience_level || '')}</small>
+            </td>
+            <td>${escapeHtml(j.department)}</td>
+            <td><span class="badge badge-light border">${escapeHtml(j.job_type)}</span></td>
+            <td><small>${escapeHtml(j.location || 'Phnom Penh')}</small></td>
+            <td>
+              <span class="badge badge-pill badge-primary px-2 py-1">${j.applicant_count || 0} applicants</span>
+            </td>
+            <td>${statusBadge}</td>
+            <td class="text-right">
+              <button class="btn btn-sm btn-outline-secondary mr-1" title="Toggle Open/Close" onclick="toggleJobStatus(${j.id}, '${j.status}')">
+                <i class="fa fa-power-off"></i>
+              </button>
+              <button class="btn btn-sm btn-outline-primary mr-1" title="Edit Job" onclick="openEditJobModal(${j.id})">
+                <i class="fa fa-pencil"></i>
+              </button>
+              <button class="btn btn-sm btn-outline-danger" title="Delete Job" onclick="deleteJob(${j.id}, '${escapeQuote(j.title)}')">
+                <i class="fa fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        `;
+      });
+      tbody.innerHTML = html;
+    }
+
+    /**
+     * Load Applications for Admin
+     */
+    async function loadApplications() {
+      const tbody = document.getElementById('applicants-table-body');
+      const statusFilter = document.getElementById('filter-app-status').value;
+
+      try {
+        let url = `${API_BASE_URL}/applications`;
+        if (statusFilter && statusFilter !== 'all') {
+          url += `?status=${encodeURIComponent(statusFilter)}`;
+        }
+
+        const res = await fetch(url, {
+          headers: { 'Authorization': `Bearer ${currentAuthToken}` }
+        });
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          renderApplicationsTable(data.data);
+          updateMetrics();
+        } else {
+          tbody.innerHTML = `<tr><td colspan="7" class="text-center py-4 text-danger">${data.message || 'Error loading applications'}</td></tr>`;
+        }
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-4 text-danger">Failed to connect to API</td></tr>`;
+      }
+    }
+
+    function renderApplicationsTable(apps) {
+      const tbody = document.getElementById('applicants-table-body');
+      document.getElementById('tab-applicants-count').textContent = apps.length;
+
+      if (apps.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-5 text-muted">No applications found in this category.</td></tr>`;
+        return;
+      }
+
+      let html = '';
+      apps.forEach(function (app) {
+        let badgeClass = 'badge-pending';
+        if (app.status === 'reviewed') badgeClass = 'badge-reviewed';
+        if (app.status === 'shortlisted') badgeClass = 'badge-shortlisted';
+        if (app.status === 'rejected') badgeClass = 'badge-rejected';
+
+        const dateStr = app.applied_at ? new Date(app.applied_at).toLocaleDateString() : '-';
+
+        html += `
+          <tr>
+            <td>
+              <div class="font-weight-bold text-dark">${escapeHtml(app.full_name)}</div>
+            </td>
+            <td>
+              <div><i class="fa fa-envelope-o text-muted mr-1"></i> <a href="mailto:${escapeHtml(app.email)}">${escapeHtml(app.email)}</a></div>
+              <div><i class="fa fa-phone text-muted mr-1"></i> <a href="tel:${escapeHtml(app.phone)}">${escapeHtml(app.phone)}</a></div>
+            </td>
+            <td>
+              <strong>${escapeHtml(app.job_title || 'General / Spontaneous')}</strong>
+              ${app.job_department ? `<div class="small text-muted">${escapeHtml(app.job_department)}</div>` : ''}
+            </td>
+            <td><small class="text-muted">${dateStr}</small></td>
+            <td>
+              <select class="form-control form-control-sm badge-status ${badgeClass}" onchange="changeApplicationStatus(${app.id}, this.value)" style="border: 1px solid #cbd5e1; font-weight: 700;">
+                <option value="pending" ${app.status === 'pending' ? 'selected' : ''}>Pending</option>
+                <option value="reviewed" ${app.status === 'reviewed' ? 'selected' : ''}>Reviewed</option>
+                <option value="shortlisted" ${app.status === 'shortlisted' ? 'selected' : ''}>Shortlisted</option>
+                <option value="rejected" ${app.status === 'rejected' ? 'selected' : ''}>Rejected</option>
+              </select>
+            </td>
+            <td>
+              <button class="btn btn-sm btn-outline-success font-weight-bold" onclick="downloadCandidateCV(${app.id})">
+                <i class="fa fa-download mr-1"></i> Download CV
+              </button>
+            </td>
+            <td class="text-right">
+              <button class="btn btn-sm btn-outline-info mr-1" title="View Note & Details" onclick="viewAppDetails(${app.id})">
+                <i class="fa fa-eye"></i>
+              </button>
+              <button class="btn btn-sm btn-outline-danger" title="Delete Application" onclick="deleteApplication(${app.id}, '${escapeQuote(app.full_name)}')">
+                <i class="fa fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        `;
+      });
+      tbody.innerHTML = html;
+    }
+
+    /**
+     * Download CV via API with Bearer token
+     */
+    window.downloadCandidateCV = async function (appId) {
+      try {
+        const res = await fetch(`${API_BASE_URL}/applications/${appId}/download-cv`, {
+          headers: { 'Authorization': `Bearer ${currentAuthToken}` }
+        });
+
+        if (!res.ok) {
+          alert('Could not download CV file: ' + res.statusText);
+          return;
+        }
+
+        const blob = await res.blob();
+        const disposition = res.headers.get('content-disposition');
+        let filename = 'candidate_cv.pdf';
+        if (disposition && disposition.indexOf('filename=') !== -1) {
+          const match = disposition.match(/filename="?([^"]+)"?/);
+          if (match && match[1]) filename = match[1];
+        }
+
+        const downloadUrl = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = downloadUrl;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        window.URL.revokeObjectURL(downloadUrl);
+      } catch (err) {
+        console.error('Download error:', err);
+        alert('Download failed. Please check backend server.');
+      }
+    };
+
+    /**
+     * Change application status
+     */
+    window.changeApplicationStatus = async function (appId, newStatus) {
+      try {
+        const res = await fetch(`${API_BASE_URL}/applications/${appId}/status`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${currentAuthToken}`
+          },
+          body: JSON.stringify({ status: newStatus })
+        });
+        if (res.ok) {
+          loadApplications();
+        } else {
+          alert('Failed to update status');
+        }
+      } catch (err) {
+        alert('Network error when updating status');
+      }
+    };
+
+    /**
+     * Delete application
+     */
+    window.deleteApplication = async function (appId, applicantName) {
+      if (!confirm(`Are you sure you want to permanently delete application from "${applicantName}"? This will also remove the CV file from server.`)) {
+        return;
+      }
+      try {
+        const res = await fetch(`${API_BASE_URL}/applications/${appId}`, {
+          method: 'DELETE',
+          headers: { 'Authorization': `Bearer ${currentAuthToken}` }
+        });
+        if (res.ok) {
+          loadApplications();
+        } else {
+          alert('Failed to delete application');
+        }
+      } catch (err) {
+        alert('Network error when deleting application');
+      }
+    };
+
+    /**
+     * View Application Details Modal
+     */
+    window.viewAppDetails = async function (appId) {
+      const modalBody = document.getElementById('app-modal-content');
+      modalBody.innerHTML = '<div class="text-center py-4"><i class="fa fa-spinner fa-spin"></i> Loading...</div>';
+      $('#appDetailsModal').modal('show');
+
+      try {
+        const res = await fetch(`${API_BASE_URL}/applications/${appId}`, {
+          headers: { 'Authorization': `Bearer ${currentAuthToken}` }
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          const app = data.data;
+          modalBody.innerHTML = `
+            <div class="mb-3">
+              <h4 class="font-weight-bold text-dark mb-1">${escapeHtml(app.full_name)}</h4>
+              <p class="text-muted mb-2">Applied for: <strong class="text-primary">${escapeHtml(app.job_title || 'General Position')}</strong></p>
+              <div class="small text-muted mb-3"><i class="fa fa-calendar mr-1"></i> Applied Date: ${new Date(app.applied_at).toLocaleString()}</div>
+            </div>
+            <hr>
+            <div class="row mb-3">
+              <div class="col-6">
+                <small class="text-muted font-weight-bold d-block">EMAIL</small>
+                <a href="mailto:${escapeHtml(app.email)}">${escapeHtml(app.email)}</a>
+              </div>
+              <div class="col-6">
+                <small class="text-muted font-weight-bold d-block">PHONE</small>
+                <a href="tel:${escapeHtml(app.phone)}">${escapeHtml(app.phone)}</a>
+              </div>
+            </div>
+            <div class="mb-3">
+              <small class="text-muted font-weight-bold d-block mb-1">COVER NOTE / INTRODUCTION</small>
+              <div class="p-3 bg-light rounded text-dark" style="white-space: pre-wrap; font-size: 0.9rem;">
+                ${escapeHtml(app.cover_letter || 'No cover note provided.')}
+              </div>
+            </div>
+            <div class="pt-2">
+              <button class="btn btn-success btn-block" onclick="downloadCandidateCV(${app.id})">
+                <i class="fa fa-download mr-1"></i> Download Candidate CV (${escapeHtml(app.original_file_name || 'Resume')})
+              </button>
+            </div>
+          `;
+        }
+      } catch (err) {
+        modalBody.innerHTML = '<div class="alert alert-danger">Error loading application details.</div>';
+      }
+    };
+
+    /**
+     * Job Form Modal (Create or Edit)
+     */
+    window.prepareCreateJobModal = function () {
+      document.getElementById('jobModalTitle').innerHTML = '<i class="fa fa-briefcase mr-2"></i> Post New Job Opening';
+      document.getElementById('job-edit-id').value = '';
+      document.getElementById('job-form').reset();
+      document.getElementById('job-modal-alert').style.display = 'none';
+      document.getElementById('job-status-input').value = 'open';
+    };
+
+    window.openEditJobModal = function (jobId) {
+      const job = cachedAdminJobs.find(j => j.id === jobId);
+      if (!job) return;
+
+      document.getElementById('jobModalTitle').innerHTML = '<i class="fa fa-pencil mr-2"></i> Edit Job Posting';
+      document.getElementById('job-edit-id').value = job.id;
+      document.getElementById('job-title-input').value = job.title;
+      document.getElementById('job-dept-input').value = job.department;
+      document.getElementById('job-type-input').value = job.job_type;
+      document.getElementById('job-loc-input').value = job.location || 'Phnom Penh, Cambodia';
+      document.getElementById('job-exp-input').value = job.experience_level || '';
+      document.getElementById('job-salary-input').value = job.salary_range || '';
+      document.getElementById('job-desc-input').value = job.description;
+      document.getElementById('job-req-input').value = job.requirements || '';
+      document.getElementById('job-resp-input').value = job.responsibilities || '';
+      document.getElementById('job-status-input').value = job.status || 'open';
+      document.getElementById('job-modal-alert').style.display = 'none';
+
+      $('#jobModal').modal('show');
+    };
+
+    function setupJobFormHandler() {
+      const form = document.getElementById('job-form');
+      const alertBox = document.getElementById('job-modal-alert');
+      const saveBtn = document.getElementById('btn-save-job');
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const editId = document.getElementById('job-edit-id').value;
+        const payload = {
+          title: document.getElementById('job-title-input').value.trim(),
+          department: document.getElementById('job-dept-input').value.trim(),
+          job_type: document.getElementById('job-type-input').value,
+          location: document.getElementById('job-loc-input').value.trim(),
+          experience_level: document.getElementById('job-exp-input').value.trim(),
+          salary_range: document.getElementById('job-salary-input').value.trim(),
+          description: document.getElementById('job-desc-input').value.trim(),
+          requirements: document.getElementById('job-req-input').value.trim(),
+          responsibilities: document.getElementById('job-resp-input').value.trim(),
+          status: document.getElementById('job-status-input').value,
+        };
+
+        alertBox.style.display = 'none';
+        saveBtn.disabled = true;
+        saveBtn.innerHTML = '<i class="fa fa-spinner fa-spin mr-1"></i> Saving...';
+
+        try {
+          const url = editId ? `${API_BASE_URL}/jobs/${editId}` : `${API_BASE_URL}/jobs`;
+          const method = editId ? 'PUT' : 'POST';
+
+          const res = await fetch(url, {
+            method: method,
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${currentAuthToken}`
+            },
+            body: JSON.stringify(payload)
+          });
+          const data = await res.json();
+
+          if (res.ok && data.success) {
+            $('#jobModal').modal('hide');
+            loadJobsAdmin();
+          } else {
+            alertBox.textContent = data.message || 'Error saving job.';
+            alertBox.style.display = 'block';
+          }
+        } catch (err) {
+          alertBox.textContent = 'Network error saving job.';
+          alertBox.style.display = 'block';
+        } finally {
+          saveBtn.disabled = false;
+          saveBtn.innerHTML = 'Save Job';
+        }
+      });
+    }
+
+    window.toggleJobStatus = async function (jobId, currentStatus) {
+      const newStatus = currentStatus === 'open' ? 'closed' : 'open';
+      try {
+        const res = await fetch(`${API_BASE_URL}/jobs/${jobId}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${currentAuthToken}`
+          },
+          body: JSON.stringify({ status: newStatus })
+        });
+        if (res.ok) {
+          loadJobsAdmin();
+        }
+      } catch (err) {
+        alert('Error updating status');
+      }
+    };
+
+    window.deleteJob = async function (jobId, jobTitle) {
+      if (!confirm(`Are you sure you want to delete the job "${jobTitle}"?`)) {
+        return;
+      }
+      try {
+        const res = await fetch(`${API_BASE_URL}/jobs/${jobId}`, {
+          method: 'DELETE',
+          headers: { 'Authorization': `Bearer ${currentAuthToken}` }
+        });
+        if (res.ok) {
+          loadJobsAdmin();
+        } else {
+          alert('Failed to delete job');
+        }
+      } catch (err) {
+        alert('Network error deleting job');
+      }
+    };
+
+    function updateMetrics() {
+      const totalJobs = cachedAdminJobs.length;
+      const openJobs = cachedAdminJobs.filter(j => j.status === 'open').length;
+      document.getElementById('stat-total-jobs').textContent = totalJobs;
+      document.getElementById('stat-open-jobs').textContent = openJobs;
+
+      fetch(`${API_BASE_URL}/applications`, {
+        headers: { 'Authorization': `Bearer ${currentAuthToken}` }
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && Array.isArray(data.data)) {
+          const apps = data.data;
+          document.getElementById('stat-total-applicants').textContent = apps.length;
+          document.getElementById('stat-pending-reviews').textContent = apps.filter(a => a.status === 'pending').length;
+        }
+      })
+      .catch(() => {});
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function escapeQuote(str) {
+      if (!str) return '';
+      return String(str).replace(/'/g, "\\'");
+    }
+  </script>
+</body>
+</html>
+

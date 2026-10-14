@@ -166,104 +166,12 @@
         </div>
 
         <div class="row justify-content-center">
-          <div class="col-lg-10 col-12">
-            
-            <!-- Job 1 -->
-            <div class="job-card" data-aos="fade-up" data-aos-delay="100">
-              <div class="job-info">
-                <h3 class="job-title">Junior Marketing &amp; Content Creator</h3>
-                <div class="job-badges">
-                  <span class="job-badge"><i class="fa fa-briefcase"></i> Marketing &amp; Media</span>
-                  <span class="job-badge"><i class="fa fa-map-marker"></i> Phnom Penh</span>
-                  <span class="job-badge badge-type"><i class="fa fa-clock-o"></i> Full-Time</span>
-                </div>
-                <p class="job-desc">Create captivating visual and digital content, support multi-channel marketing campaigns, assist in event photography, and elevate brand storytelling across Naki Group developments.</p>
-              </div>
-              <div class="job-action">
-                <a href="#quick-apply" class="btn btn-primary text-white" onclick="document.getElementById('applied-position').value='Junior Marketing & Content Creator';">Apply Now</a>
-              </div>
+          <div class="col-lg-10 col-12" id="jobs-container">
+            <!-- Dynamic Open Jobs loaded from Backend API (PostgreSQL) -->
+            <div class="text-center py-5 text-muted">
+              <i class="fa fa-spinner fa-spin fa-2x mb-3" style="color: #0f2b5c;"></i>
+              <p>Loading current openings from Naki Group database...</p>
             </div>
-
-            <!-- Job 2 -->
-            <div class="job-card" data-aos="fade-up" data-aos-delay="150">
-              <div class="job-info">
-                <h3 class="job-title">Operations Officer</h3>
-                <div class="job-badges">
-                  <span class="job-badge"><i class="fa fa-briefcase"></i> Property Operations</span>
-                  <span class="job-badge"><i class="fa fa-map-marker"></i> Phnom Penh</span>
-                  <span class="job-badge badge-type"><i class="fa fa-clock-o"></i> Full-Time</span>
-                </div>
-                <p class="job-desc">Supervise building maintenance protocols, oversee facility management, liaise with service vendors, and uphold international standards of residential comfort and security.</p>
-              </div>
-              <div class="job-action">
-                <a href="#quick-apply" class="btn btn-primary text-white" onclick="document.getElementById('applied-position').value='Operations Officer';">Apply Now</a>
-              </div>
-            </div>
-
-            <!-- Job 3 -->
-            <div class="job-card" data-aos="fade-up" data-aos-delay="200">
-              <div class="job-info">
-                <h3 class="job-title">Front Desk Receptionist / Guest Relations</h3>
-                <div class="job-badges">
-                  <span class="job-badge"><i class="fa fa-briefcase"></i> Hospitality</span>
-                  <span class="job-badge"><i class="fa fa-map-marker"></i> BKK1, Phnom Penh</span>
-                  <span class="job-badge badge-type"><i class="fa fa-clock-o"></i> Full-Time</span>
-                </div>
-                <p class="job-desc">Warmly welcome residents and guests at Silvertown Metropolitan / Naki Suites, handle check-in/check-out procedures, attend to resident inquiries, and ensure five-star service satisfaction.</p>
-              </div>
-              <div class="job-action">
-                <a href="#quick-apply" class="btn btn-primary text-white" onclick="document.getElementById('applied-position').value='Front Desk Receptionist';">Apply Now</a>
-              </div>
-            </div>
-
-            <!-- Job 4 -->
-            <div class="job-card" data-aos="fade-up" data-aos-delay="250">
-              <div class="job-info">
-                <h3 class="job-title">Barista / F&amp;B Coordinator</h3>
-                <div class="job-badges">
-                  <span class="job-badge"><i class="fa fa-briefcase"></i> Food &amp; Beverage</span>
-                  <span class="job-badge"><i class="fa fa-map-marker"></i> Phnom Penh</span>
-                  <span class="job-badge badge-type"><i class="fa fa-clock-o"></i> Full-Time</span>
-                </div>
-                <p class="job-desc">Craft specialty coffees and beverages, manage food &amp; beverage counter inventory, maintain pristine station hygiene, and provide warm, personalized guest hospitality.</p>
-              </div>
-              <div class="job-action">
-                <a href="#quick-apply" class="btn btn-primary text-white" onclick="document.getElementById('applied-position').value='Barista / F&B Coordinator';">Apply Now</a>
-              </div>
-            </div>
-
-            <!-- Job 5 -->
-            <div class="job-card" data-aos="fade-up" data-aos-delay="300">
-              <div class="job-info">
-                <h3 class="job-title">Account &amp; Admin Officer</h3>
-                <div class="job-badges">
-                  <span class="job-badge"><i class="fa fa-briefcase"></i> Finance &amp; Admin</span>
-                  <span class="job-badge"><i class="fa fa-map-marker"></i> Koh Pich, Phnom Penh</span>
-                  <span class="job-badge badge-type"><i class="fa fa-clock-o"></i> Full-Time</span>
-                </div>
-                <p class="job-desc">Assist with monthly accounts reconciliation, prepare purchase orders and invoices, manage administrative documentation, and support daily corporate finance workflows.</p>
-              </div>
-              <div class="job-action">
-                <a href="#quick-apply" class="btn btn-primary text-white" onclick="document.getElementById('applied-position').value='Account & Admin Officer';">Apply Now</a>
-              </div>
-            </div>
-
-            <!-- Job 6 -->
-            <div class="job-card" data-aos="fade-up" data-aos-delay="350">
-              <div class="job-info">
-                <h3 class="job-title">Hospitality &amp; Marketing Intern</h3>
-                <div class="job-badges">
-                  <span class="job-badge"><i class="fa fa-briefcase"></i> Internship Program</span>
-                  <span class="job-badge"><i class="fa fa-map-marker"></i> Phnom Penh</span>
-                  <span class="job-badge badge-type"><i class="fa fa-graduation-cap"></i> Internship</span>
-                </div>
-                <p class="job-desc">Designed for fresh graduates and university students seeking real-world immersion in real estate marketing, client communication, and luxury property operations.</p>
-              </div>
-              <div class="job-action">
-                <a href="#quick-apply" class="btn btn-primary text-white" onclick="document.getElementById('applied-position').value='Hospitality & Marketing Intern';">Apply Now</a>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
@@ -329,48 +237,59 @@
           <div class="col-lg-7 col-12" data-aos="fade-up" data-aos-delay="200">
             <div class="quick-apply-card">
               <h3 class="mb-4" style="color: #0f2b5c; font-weight: 700;">Quick Job Application</h3>
-              <form action="#" method="post">
+              <form id="quick-apply-form" enctype="multipart/form-data">
+                <!-- Alert box for success / error messages -->
+                <div id="apply-alert" style="display: none;" class="mb-3"></div>
+
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <label for="apply-name">Full Name *</label>
-                    <input type="text" id="apply-name" class="form-control" placeholder="Enter your full name" required>
+                    <input type="text" id="apply-name" name="full_name" class="form-control" placeholder="Enter your full name" required>
                   </div>
                   <div class="col-md-6 form-group">
                     <label for="apply-phone">Phone Number *</label>
-                    <input type="text" id="apply-phone" class="form-control" placeholder="e.g. +855 12 345 678" required>
+                    <input type="text" id="apply-phone" name="phone" class="form-control" placeholder="e.g. +855 12 345 678" required>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <label for="apply-email">Email Address *</label>
-                    <input type="email" id="apply-email" class="form-control" placeholder="Enter your email" required>
+                    <input type="email" id="apply-email" name="email" class="form-control" placeholder="Enter your email" required>
                   </div>
                   <div class="col-md-6 form-group">
                     <label for="applied-position">Position Applying For *</label>
-                    <select id="applied-position" class="form-control" required>
-                      <option value="">-- Select a Position --</option>
-                      <option value="Junior Marketing & Content Creator">Junior Marketing &amp; Content Creator</option>
-                      <option value="Operations Officer">Operations Officer</option>
-                      <option value="Front Desk Receptionist">Front Desk Receptionist / Guest Relations</option>
-                      <option value="Barista / F&B Coordinator">Barista / F&amp;B Coordinator</option>
-                      <option value="Account & Admin Officer">Account &amp; Admin Officer</option>
-                      <option value="Hospitality & Marketing Intern">Hospitality &amp; Marketing Intern</option>
-                      <option value="Other">Other / Spontaneous Application</option>
+                    <select id="applied-position" name="job_id" class="form-control" required>
+                      <option value="">-- Loading Open Positions... --</option>
                     </select>
+                  </div>
+                </div>
+
+                <!-- CV File Upload -->
+                <div class="row mb-3">
+                  <div class="col-md-12 form-group">
+                    <label for="apply-cv" class="font-weight-bold">Upload Your CV / Resume (PDF, DOC, DOCX - Max 5MB) *</label>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="apply-cv" name="cv" accept=".pdf,.doc,.docx" required>
+                      <label class="custom-file-label" for="apply-cv" id="apply-cv-label">Choose CV file (PDF or DOCX)...</label>
+                    </div>
+                    <small class="form-text text-muted"><i class="fa fa-info-circle mr-1"></i> Accepted formats: .pdf, .doc, .docx. Maximum file size: 5MB.</small>
                   </div>
                 </div>
 
                 <div class="row mb-4">
                   <div class="col-md-12 form-group">
                     <label for="apply-message">Cover Note / Introduction</label>
-                    <textarea id="apply-message" class="form-control" cols="30" rows="5" placeholder="Briefly tell us about your experience, background, or links to your CV/portfolio..."></textarea>
+                    <textarea id="apply-message" name="cover_letter" class="form-control" cols="30" rows="4" placeholder="Briefly tell us about your experience, background, or motivation..."></textarea>
                   </div>
                 </div>
 
                 <div class="row align-items-center">
                   <div class="col-md-6 form-group mb-3 mb-md-0">
-                    <button type="submit" class="btn btn-primary text-white font-weight-bold px-4 py-3 btn-block">Submit Application</button>
+                    <button type="submit" id="btn-submit-apply" class="btn btn-primary text-white font-weight-bold px-4 py-3 btn-block">
+                      <span class="btn-text"><i class="fa fa-paper-plane mr-2"></i> Submit Application</span>
+                      <span class="btn-spinner" style="display: none;"><i class="fa fa-spinner fa-spin mr-2"></i> Submitting...</span>
+                    </button>
                   </div>
                   <div class="col-md-6 text-muted small">
                     * You may also send your CV directly to <a href="mailto:hr@nakigroup.com" class="text-primary font-weight-bold">hr@nakigroup.com</a>
@@ -452,5 +371,6 @@
     
 
     <script src="js/main.js"></script>
+    <script src="js/careers-api.js"></script>
   </body>
 </html>
