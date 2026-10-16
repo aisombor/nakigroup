@@ -1232,8 +1232,6 @@ textarea.form-control {
 	.image {
 		position: relative;
 		overflow: hidden;
-		height: 100%;
-		min-height: 420px;
 		background-color: #f8fafc;
 		a {
 			display: block;
@@ -1243,34 +1241,57 @@ textarea.form-control {
 		img {
 			width: 100%;
 			height: 100%;
-			min-height: 420px;
 			object-fit: cover;
 			object-position: center center;
 			display: block;
 			transition: transform .45s ease;
 		}
 		@include media-breakpoint-up(lg) {
+			align-self: stretch;
 			min-height: 440px;
-			height: 100%;
+			height: auto;
+			position: relative;
+			a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+			}
 			img {
-				min-height: 440px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				min-height: 100%;
+				object-fit: cover;
 			}
 		}
 		@include media-breakpoint-down(md) {
 			margin-bottom: 0;
-			height: 420px;
-			min-height: 420px;
+			height: 380px;
+			min-height: 380px;
+			a {
+				position: relative;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
 			img {
-				height: 420px;
-				min-height: 420px;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
 			}
 		}
 		@include media-breakpoint-down(xs) {
-			height: 440px;
-			min-height: 440px;
+			height: 320px;
+			min-height: 320px;
 			img {
-				height: 440px;
-				min-height: 440px;
+				height: 320px;
+				min-height: 320px;
 			}
 		}
 	}
