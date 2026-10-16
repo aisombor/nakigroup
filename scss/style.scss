@@ -101,13 +101,13 @@ textarea.form-control {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	padding: 18px 0;
+	padding: 10px 0;
 	z-index: 1001;
 	background: $white;
 	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
 	transition: .3s all ease-in-out;
 	&.scrolled {
-		padding: 14px 0;
+		padding: 8px 0;
 		background: $white;
 		box-shadow: 0 5px 20px -5px rgba(0,0,0,.08);
 		.site-menu-toggle {
@@ -434,10 +434,56 @@ textarea.form-control {
 
 // section
 .section {
-	padding: 7em 0;
+	padding: 60px 0;
 	@include media-breakpoint-down(md) {
-		padding: 3em 0;
+		padding: 40px 0;
 	}
+}
+
+// Section Heading Balance & Equal Vertical Spacing
+.section .row.justify-content-center.text-center.mb-5,
+.section .row.text-center.mb-5,
+.section .container > .row:first-child.text-center,
+.projects-overview-section .row.justify-content-center.text-center.mb-5,
+.projects-showcase-section .row.justify-content-center.text-center.mb-5,
+.careers-intro-section .row.justify-content-center.text-center.mb-5,
+.careers-jobs-section .row.justify-content-center.text-center.mb-5,
+.mission-values-section .row.justify-content-center.text-center.mb-5,
+.press-media-section .row.justify-content-center.text-center.mb-5 {
+	margin-bottom: 60px !important;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 40px !important;
+	}
+}
+
+.section .heading ~ p:last-child,
+.section .row.justify-content-center.text-center p:last-child,
+.section .row.text-center.mb-5 p:last-child,
+.projects-overview-section .heading ~ p:last-child,
+.projects-showcase-section .heading ~ p:last-child,
+.careers-intro-section .heading ~ p:last-child,
+.careers-jobs-section .heading ~ p:last-child,
+.mission-values-section .heading ~ p:last-child,
+.press-media-section .heading ~ p:last-child {
+	margin-bottom: 0 !important;
+}
+
+// Remove trailing margin on last items so section bottom padding is exactly 60px
+.section .container > .site-block-half:last-child {
+	margin-bottom: 0 !important;
+}
+.section .container > .row:last-child > [class*="col-"] > .media-custom,
+.section .container > .row:last-child > [class*="col-"] > .career-perk-card,
+.section .container > .row:last-child > [class*="col-"] > .project-stat-card,
+.section .container > .row:last-child > [class*="col-"] > .value-card {
+	margin-bottom: 0 !important;
+}
+
+// Consecutive sections of same background: eliminate double padding
+.section.bg-light + .section.bg-light,
+.section.blog-post-entry.bg-light + .section.bg-light,
+.section.bg-light + .mission-values-section.bg-light {
+	padding-top: 0 !important;
 }
 .lead {
 	@include media-breakpoint-down(md) {

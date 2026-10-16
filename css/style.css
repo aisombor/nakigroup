@@ -150,7 +150,7 @@ textarea.form-control {
 .site-logo-img {
   height: 100%;
   width: auto;
-  max-height: 80px;
+  max-height: 55px;
 }
 
 /* ===== Desktop Navigation ===== */
@@ -912,10 +912,59 @@ textarea.form-control {
     transform: rotate(-135deg); }
 
 .section {
-  padding: 7em 0; }
+  padding: 60px 0; }
   @media (max-width: 991.98px) {
     .section {
-      padding: 3em 0; } }
+      padding: 40px 0; } }
+
+/* Section Heading Balance & Equal Vertical Spacing */
+.section .row.justify-content-center.text-center.mb-5,
+.section .row.text-center.mb-5,
+.section .container > .row:first-child.text-center,
+.projects-overview-section .row.justify-content-center.text-center.mb-5,
+.projects-showcase-section .row.justify-content-center.text-center.mb-5,
+.careers-intro-section .row.justify-content-center.text-center.mb-5,
+.careers-jobs-section .row.justify-content-center.text-center.mb-5,
+.mission-values-section .row.justify-content-center.text-center.mb-5,
+.press-media-section .row.justify-content-center.text-center.mb-5 {
+  margin-bottom: 60px !important; }
+  @media (max-width: 991.98px) {
+    .section .row.justify-content-center.text-center.mb-5,
+    .section .row.text-center.mb-5,
+    .section .container > .row:first-child.text-center,
+    .projects-overview-section .row.justify-content-center.text-center.mb-5,
+    .projects-showcase-section .row.justify-content-center.text-center.mb-5,
+    .careers-intro-section .row.justify-content-center.text-center.mb-5,
+    .careers-jobs-section .row.justify-content-center.text-center.mb-5,
+    .mission-values-section .row.justify-content-center.text-center.mb-5,
+    .press-media-section .row.justify-content-center.text-center.mb-5 {
+      margin-bottom: 40px !important; } }
+
+.section .heading ~ p:last-child,
+.section .row.justify-content-center.text-center p:last-child,
+.section .row.text-center.mb-5 p:last-child,
+.projects-overview-section .heading ~ p:last-child,
+.projects-showcase-section .heading ~ p:last-child,
+.careers-intro-section .heading ~ p:last-child,
+.careers-jobs-section .heading ~ p:last-child,
+.mission-values-section .heading ~ p:last-child,
+.press-media-section .heading ~ p:last-child {
+  margin-bottom: 0 !important; }
+
+/* Remove trailing margin on last items so section bottom padding is exactly 60px */
+.section .container > .site-block-half:last-child {
+  margin-bottom: 0 !important; }
+.section .container > .row:last-child > [class*="col-"] > .media-custom,
+.section .container > .row:last-child > [class*="col-"] > .career-perk-card,
+.section .container > .row:last-child > [class*="col-"] > .project-stat-card,
+.section .container > .row:last-child > [class*="col-"] > .value-card {
+  margin-bottom: 0 !important; }
+
+/* Consecutive sections of same background: eliminate double padding */
+.section.bg-light + .section.bg-light,
+.section.blog-post-entry.bg-light + .section.bg-light,
+.section.bg-light + .mission-values-section.bg-light {
+  padding-top: 0 !important; }
 
 @media (max-width: 991.98px) {
   .lead {
@@ -2398,7 +2447,12 @@ textarea.form-control {
    ======================================================== */
 
 .careers-intro-section {
-  padding: 70px 0 40px;
+  padding: 60px 0;
+}
+@media (max-width: 991.98px) {
+  .careers-intro-section {
+    padding: 40px 0;
+  }
 }
 
 .career-perk-card {
@@ -2446,8 +2500,13 @@ textarea.form-control {
 
 /* Open Positions */
 .careers-jobs-section {
-  padding: 60px 0 80px;
+  padding: 60px 0;
   background-color: #f8f9fa;
+}
+@media (max-width: 991.98px) {
+  .careers-jobs-section {
+    padding: 40px 0;
+  }
 }
 
 .job-card {
@@ -2670,8 +2729,13 @@ textarea.form-control {
    ======================================================== */
 
 .projects-overview-section {
-  padding: 60px 0 40px;
+  padding: 60px 0;
   background-color: #ffffff;
+}
+@media (max-width: 991.98px) {
+  .projects-overview-section {
+    padding: 40px 0;
+  }
 }
 
 .project-stat-card {
@@ -2708,8 +2772,13 @@ textarea.form-control {
 
 /* Main Projects Showcase */
 .projects-showcase-section {
-  padding: 40px 0 80px;
+  padding: 60px 0;
   background-color: #f8f9fa;
+}
+@media (max-width: 991.98px) {
+  .projects-showcase-section {
+    padding: 40px 0;
+  }
 }
 
 .project-card-item {
@@ -3167,7 +3236,12 @@ textarea.form-control {
   background: #f8fafc;
   border-top: 1px solid #eaeef5;
   border-bottom: 1px solid #eaeef5;
-  padding: 70px 0;
+  padding: 60px 0;
+}
+@media (max-width: 991.98px) {
+  .press-media-section {
+    padding: 40px 0;
+  }
 }
 
 .press-info-card {
@@ -3428,7 +3502,12 @@ textarea.form-control {
 
 /* Mission & Core Values Section */
 .mission-values-section {
-  padding: 5rem 0;
+  padding: 60px 0;
+}
+@media (max-width: 991.98px) {
+  .mission-values-section {
+    padding: 40px 0;
+  }
 }
 .value-card {
   border: 1px solid #f0f0f0;
@@ -3457,16 +3536,26 @@ textarea.form-control {
 
 /* PowerApps Style Latest Press Section */
 .press-portal-section {
-  padding: 70px 0 90px;
+  padding: 60px 0;
   background-color: #f8fafc;
+}
+@media (max-width: 991.98px) {
+  .press-portal-section {
+    padding: 40px 0;
+  }
 }
 .press-portal-heading {
   font-size: 36px;
   font-weight: 700;
   color: #0f172a;
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 60px !important;
   letter-spacing: -0.5px;
+}
+@media (max-width: 991.98px) {
+  .press-portal-heading {
+    margin-bottom: 40px !important;
+  }
 }
 .press-portal-card {
   background: #ffffff;
